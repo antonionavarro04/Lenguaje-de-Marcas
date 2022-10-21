@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tarea xmlns:l="http://www.web.com/libros" xmlns:a="http://www.web.com/autores">
+    <l:libro>
+        <l:titulo>El Quijote</l:titulo>
+        <l:descripcion>Libro de las aventuras del Ingenioso Hidalgo, don Quijote de la Mancha</l:descripcion>
+        <l:autor>Cervantes</l:autor>
+        <l:año>1605</l:año>
+        <l:editorial>Alianza</l:editorial>
+        <l:ciudad>Madrid</l:ciudad>
+        <l:pais>España</l:pais>
+    </l:libro>
+
+    <l:libro>
+        <l:titulo>El Principito</l:titulo>
+        <l:descripcion>Libro de aventuras de un niño que viaja por el universo</l:descripcion>
+        <l:autor>Antoine de Saint-Exupéry</l:autor>
+        <l:año>1943</l:año>
+        <l:editorial>Seix Barral</l:editorial>
+        <l:ciudad>París</l:ciudad>
+        <l:pais>Francia</l:pais>
+    </l:libro>
+
+    <l:libro>
+        <l:titulo>El Hobbit</l:titulo>
+        <l:descripcion></l:descripcion>
+        <l:autor>J.R.R. Tolkien</l:autor>
+        <l:año>1937</l:año>
+        <l:editorial>Minotauro</l:editorial>
+        <l:ciudad>Londrés</l:ciudad>
+        <l:pais>Reino Unido</l:pais>
+    </l:libro>
+
+    <a:autor>
+        <a:nombre>Miguel</a:nombre>
+        <a:primerApellido>de Cervantes</a:primerApellido>
+        <a:segundoApellido>Saavedra</a:segundoApellido>
+        <a:ciudad pais="España">Alcalá de Henares</a:ciudad>
+        <a:año>1547</a:año>
+        <a:titulos>
+            <a:titulo>El Quijote</a:titulo>
+            <a:titulo>La Galatea</a:titulo>
+            <a:titulo>La Gitanilla</a:titulo>
+        </a:titulos>
+    </a:autor>
+
+    <a:autor>
+        <a:nombre>Antoine</a:nombre>
+        <a:primerApellido>de Saint-Exupéry</a:primerApellido>
+        <a:ciudad pais="Francia">Lyon</a:ciudad>
+        <a:año>1900</a:año>
+        <a:titulos>
+            <a:titulo>El Principito</a:titulo>
+            <a:titulo>Vol de nuit</a:titulo>
+            <a:titulo>Terre des hommes</a:titulo>
+        </a:titulos>
+    </a:autor>
+
+    <a:autor>
+        <a:nombre>J.R.R.</a:nombre>
+        <a:primerApellido>Tolkien</a:primerApellido>
+        <a:ciudad pais="Reino Unido">Bloemfontein</a:ciudad>
+        <a:año>1892</a:año>
+        <a:titulos>
+            <a:titulo>El Hobbit</a:titulo>
+            <a:titulo>El Señor de los Anillos</a:titulo>
+            <a:titulo>El Silmarillion</a:titulo>
+        </a:titulos>
+    </a:autor>
+</tarea>

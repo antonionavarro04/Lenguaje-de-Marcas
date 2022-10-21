@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejemplo_CDATA>
+<![CDATA[
+    #include <stdio.h>
+    int main()
+    {
+        float nota;
+        printf( "\n Introduzca nota (real): " );
+        scanf( "%f", &nota );
+        if ( 5 <= nota )
+            printf( "\n APROBADO" );
+        return 0;
+    }
+]]>
+</ejemplo_CDATA>

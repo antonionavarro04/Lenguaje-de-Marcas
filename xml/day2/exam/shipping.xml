@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos>
+    <pedido>
+        <destinatario>
+            <nombre>Juan</nombre>
+            <primerApellido>García</primerApellido>
+            <segundoApellido>Pons</segundoApellido>
+        </destinatario>
+
+        <articulos>
+            <articulo modelo="A2023">Bicicleta</articulo>
+        </articulos>
+
+        <direccion>
+            <calle>Barco</calle>
+            <numero>4</numero>
+            <piso>3</piso>
+            <letra>A</letra>
+        </direccion>
+
+        <fecha>
+            <dia>08</dia>
+            <mes>11</mes>
+            <año>2022</año>
+        </fecha>
+    </pedido>
+
+    <pedido>
+        <destinatario>
+            <nombre>María</nombre>
+            <primerApellido>Gutiérrez</primerApellido>
+            <segundoApellido>Vázquez</segundoApellido>
+        </destinatario>
+
+        <articulos>
+            <articulo marca="Mi" modelo="Band9">Reloj de Pulsera</articulo>
+            <articulo color="Naranja">Paraguas</articulo>
+        </articulos>
+
+        <direccion>
+            <calle>Andalucía</calle>
+            <numero>8</numero>
+        </direccion>
+        
+        <fecha>
+            <dia>27</dia>
+            <mes>12</mes>
+            <año>2022</año>
+        </fecha>
+    </pedido>
+</pedidos>

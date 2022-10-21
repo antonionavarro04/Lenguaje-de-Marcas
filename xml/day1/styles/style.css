@@ -1,0 +1,9 @@
+ciudades{
+    background-color: black;
+    color: white;
+}
+
+ciudad{
+    display: block;
+    margin-bottom: 20px;
+}

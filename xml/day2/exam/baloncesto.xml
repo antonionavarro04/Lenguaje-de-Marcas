@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipos>
+    <equipo>
+        <nombre>Real Betis Balocesto</nombre>
+        <ciudad>Sevilla</ciudad>
+        <entrenador></entrenador>
+        <jugadores>
+            <jugador posicion="Pivot">
+                <nombre>Yannick Nzosa</nombre>
+                <nacionalidad>Congoleño</nacionalidad>
+            </jugador>
+            <jugador posicion="Base">
+                <nombre>Shannon Evans</nombre>
+                <nacionalidad>Estadounidense</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+
+    <equipo>
+        <nombre>Real Madrid Baloncesto</nombre>
+        <ciudad>Madrid</ciudad>
+        <entrenador></entrenador>
+        <jugadores>
+            <jugador posicion="Base">
+                <nombre>Nigel Williams-Goss</nombre>
+                <nacionalidad>Estadounidense</nacionalidad>
+            </jugador>
+            <jugador posicion="Alero">
+                <nombre>Fabien Causeur</nombre>
+                <nacionalidad>Francesa</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+
+    <equipo>
+        <nombre>Unicaja Málaga</nombre>
+        <ciudad>Málaga</ciudad>
+        <entrenador></entrenador>
+        <jugadores>
+            <jugador posicion="Escolta">
+                <nombre>Darío Brizuela</nombre>
+                <nacionalidad>Española</nacionalidad>
+            </jugador>
+            <jugador posicion="Alero">
+                <nombre>Nihad Djedovic</nombre>
+                <nacionalidad>Bosnio/Alemana</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+</equipos>
