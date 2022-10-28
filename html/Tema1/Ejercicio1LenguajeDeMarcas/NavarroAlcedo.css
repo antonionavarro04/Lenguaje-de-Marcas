@@ -1,0 +1,110 @@
+body{
+    color: white;
+    background-color: #6f7459;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #273a2d;
+    margin: 0px;
+    display: flex;
+    align-items: flex-start;
+    /* border-radius: 150px; */
+}
+
+.homeButtonA{
+    width: 20%;
+    height: 60px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons{
+    width: 20%;
+    height: 60px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerLinks{
+    text-decoration: none;
+    color: #3caf61;
+    transition: 500ms;
+}
+
+.headerLinks:hover{
+    color: #28dd62;
+    transform: rotate(-360deg);
+    transition: 500ms;
+}
+
+.homeButton{
+    margin: 0px;
+    height: 50px;
+    transition: 500ms;
+}
+
+.homeButton:hover{
+    transform: rotate(360deg);
+    transition: 1000ms;
+}
+
+h1{
+    padding: 10px;
+    margin: 0px;
+    font-size: 35px;
+}
+
+article{
+    margin: 10px;
+    margin-bottom: 60px;
+}
+
+section{
+    margin: 10px;
+}
+
+footer{
+    display: flex;
+    color: black;
+    background-color: #c8ad8d;
+    height: auto;
+    /* border-radius: 150px; */
+}
+
+.containerFooter{
+    width: 50%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialLinks{
+    text-decoration: none;
+    color: #007185;;
+    transition: 500ms;
+}
+
+.socialLinks:hover{
+    text-decoration: underline;
+    color: #b80000;
+    transition: 500ms;
+}
+
+.corpImg{
+    width: 350px;
+    transition: 500ms;
+}
+
+.corpImg:hover{
+    transform: translate(900px, 0) scale(0.05, 0.05);
+    transition: 10000ms;
+}
