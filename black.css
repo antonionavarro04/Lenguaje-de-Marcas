@@ -23,10 +23,18 @@ h3{
 
 .name{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 25px;
+    right: 25px;
     margin: 0;
     color: #FF0000;
+}
+
+.version{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    color: #000;
 }
 
 .atras{
