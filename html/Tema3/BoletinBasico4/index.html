@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica de Input</title>
+        <meta charset="UTF-8">
+        <style>
+            /* ? Pequeño CSS para no tener que ir elemento por elemento, hacerlo de la otra forma también lo se hacer */
+            .data{
+                margin: 10px;
+                width: 200px;
+                height: 30px;
+            }
+
+            .robot{
+                margin: 10px;
+            }
+
+            .text{
+                margin: 10px 0px 0px 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="">
+            <input class="data" type="text" placeholder="username"><br>
+            <input class="data" type="password" placeholder="password"><br>
+            <input class="data" type="email" placeholder="e-mail"><br>
+            <input class="data" type="number" placeholder="telephone"><br>
+            <input class="data" type="date" placeholder="birthdate"><br>
+            <div class="color">
+                <div class="text">Favourite Color</div>
+                <input class="data" type="color" placeholder="favourite color">
+            </div><br>
+            <div class=""></div>
+                <div class="text">Profile Photo</div>
+                <input class="data" type="file" accept="image/*" placeholder="Foto de Perfil">
+            <div class="re-captca">
+                <div class="text">You're not a Robot <input class="robot" type="checkbox" placeholder="You're not a robot"></div>
+            </div>
+            <input class="data" type="submit" placeholder="submit">
+        </form>
+    </body>
+</html>
