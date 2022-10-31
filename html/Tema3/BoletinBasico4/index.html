@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Practica de Input</title>
+        <title>Forms Elements</title>
         <meta charset="UTF-8">
-        <style>
-            /* ? Pequeño CSS para no tener que ir elemento por elemento, hacerlo de la otra forma también lo se hacer */
-            .data{
-                margin: 10px;
-                width: 200px;
-                height: 30px;
-            }
-
-            .robot{
-                margin: 10px;
-            }
-
-            .text{
-                margin: 10px 0px 0px 10px;
-            }
-        </style>
+        <link rel="stylesheet" href="./style.css">
     </head>
 
     <body>
-        <form action="">
-            <input class="data" type="text" placeholder="username"><br>
-            <input class="data" type="password" placeholder="password"><br>
-            <input class="data" type="email" placeholder="e-mail"><br>
-            <input class="data" type="number" placeholder="telephone"><br>
-            <input class="data" type="date" placeholder="birthdate"><br>
-            <div class="color">
-                <div class="text">Favourite Color</div>
-                <input class="data" type="color" placeholder="favourite color">
-            </div><br>
-            <div class=""></div>
-                <div class="text">Profile Photo</div>
-                <input class="data" type="file" accept="image/*" placeholder="Foto de Perfil">
-            <div class="re-captca">
-                <div class="text">You're not a Robot <input class="robot" type="checkbox" placeholder="You're not a robot"></div>
+        <form method="post" action="https://www.w3schools.com/action_page.php">
+            <h1>Registrate Ahora!!!</h1>
+            <fieldset class="zone">
+                <legend>Nombre y Apellidos</legend>
+                <label for="name">Nombre:</label><br>
+                <input name="name" id="name" type="text"><br><br>
+                <label for="surname">Apellidos:</label><br>
+                <input name="surname" id="surname" type="text"><br>
+            </fieldset>
+            <input class="zone" name="phone" type="text" placeholder="Nº Teléfono"><br>
+            <div class="zone">
+                <label for="countries">País:</label>
+                <select name="countries" id="cars"><br>
+                    <option value="spain">España</option>
+                    <option value="france">Francia</option>
+                    <option value="germany">Alemania</option>
+                    <option value="italy">Italia</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="uk">Reino Unido</option>
+                    <option value="other">Otro</option>
+                </select>
             </div>
-            <input class="data" type="submit" placeholder="submit">
+            <textarea class="zone" name="desc" rows="10" cols="30">Escribe aquí la descripción de tu perfil.</textarea><br>
+            <input class="zone" name="month" list="monthBirth" placeholder="Mes de Nacimiento"><br>
+            <datalist id="monthBirth">
+                <option value="Enero">
+                <option value="Febrero">
+                <option value="Marzo">
+                <option value="Abril">
+                <option value="Mayo">
+                <option value="Junio">
+                <option value="Julio">
+                <option value="Agosto">
+                <option value="Septiembre">
+                <option value="Octubre">
+                <option value="Noviembre">
+                <option value="Diciembre">
+            </datalist>
+            <button type="reset" class="zone" name="submit">Volver a Empezar</button>
+            <button type="submit" class="zone" name="submit">Crear Perfil</button>
         </form>
     </body>
 </html>
