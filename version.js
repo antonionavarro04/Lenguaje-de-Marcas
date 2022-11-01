@@ -1,5 +1,5 @@
-// ! Script version de Black Blood que se mostrará en el menú principal
-let version = 'Black Blood v1.4';
+// ! Script version de BB que se mostrará en el menú principal
+let version = 'v1.5';
 
 let versionElement = document.getElementById('version');
 versionElement.innerHTML = version;
