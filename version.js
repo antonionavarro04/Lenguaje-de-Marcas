@@ -2,5 +2,5 @@
 let version = 'v1.5.2';
 
 let versionElement = document.getElementById('version');
-console.info(version);
+console.info("Versión: " + version);
 versionElement.innerHTML = version;
