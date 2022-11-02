@@ -46,7 +46,7 @@ h3{
     font-size: 30px;
     font-weight: bold;
     /* ! Mi primera animación, sale mal */
-    animation: ls 3s infinite;
+    /* animation: ls 3s infinite; */
 }
 
 .atrasA{
