@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'digital-navarro';
+    src: url('fonts/DS-DIGI.TTF');
+}
+
+body{
+    margin: 0px;
+}
+
+.clock{
+    /* Centramos el div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Hacemos que el div tenga un fondo */
+    background: #000;
+    /* Hacemos que el div ocupe toda la pantalla */
+    width: 100vw;
+    height: 100vh;
+    /* Hacemos que el div tenga un cursor */
+    cursor: wait;
+}
+
+.content{
+    font-family: 'digital-navarro';
+    font-size: 200px;
+    color: #0f0;
+}
+
+.version{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin-top: 5px;
+    margin-right: 5px;
+
+    font-family: 'digital-navarro';
+    font-size: 15px;
+    color: #0f0;
+}
