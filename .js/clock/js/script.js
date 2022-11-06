@@ -11,11 +11,11 @@ horas = fecha.getHours();
 minutos = fecha.getMinutes();
 segundos = fecha.getSeconds();
 
-// ^ Mostramos la fecha en la consola
-console.log(horas + ":" + minutos + ":" + segundos);
-
 // ! Coguemos el elemento con el id content
 var content = document.getElementById("content");
+
+// ! Cogemos el titulo del documento
+var title = document.title;
 
 // ! Sobreescribimos el contenido del elemento
 content.innerHTML = horas + ":" + minutos + ":" + segundos;
@@ -32,4 +32,12 @@ setInterval(function() {
 
     // ! Sobreescribimos el contenido del elemento, en caso de que las horas minutos o segundos sean menor a 10, le añadimos un 0 delante
     content.innerHTML = (horas < 10 ? "0" + horas : horas) + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos);
+
+    // ! Actualizamos el titulo de la pagina
+    document.title = (horas < 10 ? "0" + horas : horas) + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos) + " - " + title;
 } , 1000);
+
+setInterval(function() {
+    // ! Actualizamos la hora en la consola tambien
+    console.log("Hora: " + (horas < 10 ? "0" + horas : horas) + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos));
+} , 300000);
