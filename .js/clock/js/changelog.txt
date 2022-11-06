@@ -1,0 +1,6 @@
+v1.0
+Creada la base con su fuente y su estilo básico, así como una funcionalidad básica desde js.
+
+v1.1
+Añadido que el titulo se actualice también con la hora. Así como icono añadido.
+La hora se actualizará cada 5 minutos en la consola.
