@@ -6,6 +6,8 @@ var segundos = 0;
 // ^ Conseguimos una fecha completa
 var fecha = new Date();
 
+console.warn("La fecha completa es: " + fecha);
+
 // ^ Conseguimos cada uno de los valores de la fecha
 horas = fecha.getHours();
 minutos = fecha.getMinutes();
@@ -18,12 +20,12 @@ var content = document.getElementById("content");
 var title = document.title;
 
 // ! Sobreescribimos el contenido del elemento
-content.innerHTML = horas + ":" + minutos + ":" + segundos;
+content.innerHTML = (horas < 10 ? "0" + horas : horas) + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos);
 
 // ! Actualizamos la hora cada segundo
 setInterval(function() {
     // ^ Conseguimos una fecha completa
-    var fecha = new Date();
+    fecha = new Date();
 
     // ^ Conseguimos cada uno de los valores de la fecha
     horas = fecha.getHours();
