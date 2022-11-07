@@ -67,6 +67,18 @@ body{
     height: 100%;
     font-family: DIGITAL-NAVARRO-ITALIC;
     font-size: 40px;
+
+    background-color: #eee;
+    border: 1px solid #000;
+    border-radius: 30px;
+    transform: scale(0.9);
+    transition: 100ms;
+}
+
+.button:hover{
+    background-color: #ddd;
+    transform: scale(1);
+    transition: 500ms;
 }
 
 .version{

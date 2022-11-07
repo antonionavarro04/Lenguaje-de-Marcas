@@ -9,3 +9,6 @@ v1.0
     para v1.1
     - Agregar estilo a los botones
 
+v1.1
+    - Agregado estilo básico a los botones
+    - Agregado una imagen de la maquetación inicial <dev>
