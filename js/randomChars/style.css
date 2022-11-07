@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+
+.random{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+p{
+    font-size: 90px;
+    color: #f00;
+}
+
+.version{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-size: 10px;
+    color: #f00;
+}
