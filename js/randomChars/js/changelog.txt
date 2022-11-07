@@ -1,2 +1,6 @@
 v1.0
 Base del Programa Hecho, tiene una lista de caracteres del cual saca un numero aleatorio comprendido entre 0 y n, imprime el valor en el HTML cada 1000ms
+
+v1.1
+    - Titulo ahora se actualiza con el caracter
+    - Titulo cambiado a uno con mas coherencia
