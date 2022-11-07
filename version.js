@@ -1,6 +1,9 @@
 // ! Script version de BB que se mostrará en el menú principal
-let version = 'v1.6.1';
+const version = 'v1.6.2';
+const title = "LM - Index";
 
-let versionElement = document.getElementById('version');
+var versionElement = document.getElementById('version');
 console.info("Versión: " + version);
 versionElement.innerHTML = version;
+
+document.title = title;
