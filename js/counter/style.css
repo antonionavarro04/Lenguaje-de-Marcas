@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'digital-navarro';
+    src: url(./fonts/DS-DIGI.TTF);
+}
+
+@font-face {
+    font-family: 'digital-navarro-italic';
+    src: url(./fonts/DS-DIGII.TTF);
+}
+
+body{
+    margin: 0px;
+}
+
+.main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub{
+    width: 80%;
+    height: 80%;
+}
+
+.upper{
+    width: 100%;
+    height: 80%;
+    
+    /* ? Alineado al centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter{
+    font-family: digital-navarro;
+    font-size: 100px;
+}
+
+.under{
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.underButtons{
+    width: 30%;
+    height: 100%;
+    
+    /* ? Alineado al centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 100%;
+    height: 100%;
+    font-family: DIGITAL-NAVARRO-ITALIC;
+    font-size: 40px;
+}
+
+.version{
+    font-family: DIGITAL-NAVARRO;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+}

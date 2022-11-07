@@ -1,0 +1,11 @@
+v1.0
+    !!! Initial release
+    - Base de la Web
+    - Divisores de la Web
+    - Botones de la Web
+    - Estructura de Archivos
+    - Botones de la Web Funcionando
+
+    para v1.1
+    - Agregar estilo a los botones
+
