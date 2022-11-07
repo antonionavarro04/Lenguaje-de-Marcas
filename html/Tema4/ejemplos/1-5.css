@@ -1,0 +1,25 @@
+h1{
+    background-color: #00f;
+    color: #fff;
+}
+
+h2{
+    background-color: #f00;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.unordered{
+    font-style: italic;
+    text-shadow: 2.5px 2.5px 2.5px #f00;
+}
+
+.ordered{
+    text-shadow: 2.5px 2.5px 2.5px #00f;
+}
