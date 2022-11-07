@@ -11,6 +11,12 @@ body::-webkit-scrollbar {
     border-radius: 20px;
 }
 
+body::-webkit-scrollbar-thumb {
+    background-color: #222;
+    border: 2px solid #f00;
+    border-radius: 20px;
+}
+
 a{
     color: rgb(255, 0, 0);
     text-decoration: none;
