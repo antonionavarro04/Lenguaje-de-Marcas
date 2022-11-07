@@ -5,6 +5,12 @@ html{
     color: #fff;
 }
 
+body::-webkit-scrollbar {
+    background-color: #f00;
+    border: 2px solid #222;
+    border-radius: 20px;
+}
+
 a{
     color: rgb(255, 0, 0);
     text-decoration: none;
