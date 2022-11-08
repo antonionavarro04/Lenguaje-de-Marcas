@@ -13,12 +13,12 @@ body::-webkit-scrollbar {
     background-color: #f00;
     border: 1px solid #f00;
     border-radius: 20px;
-    width: 10px;
+    width: 9px;
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #000;
-    border: 1px solid #f00;
+    border: 2px solid #f00;
     border-radius: 20px;
 }
 
