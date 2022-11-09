@@ -79,6 +79,8 @@ body{
     background-color: #ddd;
     transform: scale(1);
     transition: 500ms;
+
+    cursor: pointer;
 }
 
 .version{
