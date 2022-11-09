@@ -2,6 +2,18 @@ a{
     color: white;
 }
 
+h1{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+h4{
+    margin-bottom: 0px;
+    color: white;
+}
+
 .p1{
     text-align: center;
     text-decoration: underline;
@@ -20,7 +32,10 @@ a{
 }
 
 .contDiv{
+    margin-top: 50px;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .div1{
@@ -35,32 +50,55 @@ a{
     justify-content: flex-start;
 }
 
-.aSDiv1{
+.aSDiv11{
     width: 100px;
     height: 50px;
     background-color: brown;
-    margin: 5px;
+    margin-right: 5px;
 }
 
-.aSDiv2{
+.aSDiv12{
     width: 100px;
     height: 50px;
     background-color: green;
-    margin: 5px;
+    margin-right: 5px;
 }
 
-.aSDiv3{
+.aSDiv13{
     width: 100px;
     height: 50px;
     background-color: blue;
-    margin: 5px;
+    margin-right: 5px;
 }
 
 .div2{
-    background-color: green;
+    background-color: black;
     width: 400px;
     height: 200px;
     border-radius: 25px;
+}
+
+.sDiv2{
+    display: flex;
+    flex-direction: column;
+}
+
+.aSDiv21{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+}
+
+.aSDiv22{
+    width: 100px;
+    height: 50px;
+    background-color: green;
+}
+
+.aSDiv23{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
 }
 
 .div3{
@@ -68,4 +106,39 @@ a{
     width: 400px;
     height: 200px;
     border-radius: 25px;
+}
+
+.sDiv2{
+    display: flex;
+    align-items: flex-start;
+}
+
+.aSDiv31{
+    text-decoration: none;
+    transition: 200ms ;
+}
+
+.aSDiv32{
+    text-decoration: none;
+    transition: 200ms ;
+}
+
+.aSDiv33{
+    text-decoration: none;
+    transition: 200ms ;
+}
+
+.aSDiv31:hover{
+    color: limegreen;
+    transition: 500ms;
+}
+
+.aSDiv32:hover{
+    color: rgb(255, 130, 234);
+    transition: 500ms;
+}
+
+.aSDiv33:hover{
+    color: black;
+    transition: 500ms;
 }
