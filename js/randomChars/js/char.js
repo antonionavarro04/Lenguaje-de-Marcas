@@ -1,7 +1,7 @@
 let num = 0;
 
 // ! Declaramos un array con algunos caracteres
-let chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_+-=[]{}|;':,./<>?ºª€¬¿¡";
+let chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_+-=[]{}|;':,./<>?ºª€¬¿¡あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン川曼殊沙華ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿБВГДЖЗИЙЛПФЦЧШЩЪЫЬЭЮЯбвгджзийлпфцчшщъыьэюя";
 
 // ! Declaramos una variable que contendra el texto que se mostrara en pantalla
 numJs = document.getElementById("num");

@@ -4,3 +4,6 @@ Base del Programa Hecho, tiene una lista de caracteres del cual saca un numero a
 v1.1
     - Titulo ahora se actualiza con el caracter
     - Titulo cambiado a uno con mas coherencia
+
+v1.1.1
+    - Añadidos caracteres con tildes, hiragana, katakana y cirilico
