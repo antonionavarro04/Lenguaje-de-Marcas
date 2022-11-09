@@ -20,7 +20,8 @@ nav {
     text-align: left;
     padding: 0px;
     margin: 0px;
-    position: fixed;
+    /* ! Poner el menú fijo */
+    position: fixed; /* * Línea Modificada */
 }
 
 nav ul{
