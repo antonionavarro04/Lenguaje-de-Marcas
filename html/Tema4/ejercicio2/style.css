@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "navarro-digital";
+    src: url("../../../js/counter/fonts/DS-DIGI.TTF");
+}
+
+h1{
+    font-family: navarro-digital;
+    font-size: 100px;
+    -webkit-text-stroke: 0.1px #000;
+
+    animation: rgb 5s infinite;
+}
+
+@keyframes rgb {
+    0% {
+        color: rgb(255, 0, 0);
+    }
+    20% {
+        color: rgb(0, 255, 0);
+    }
+    40% {
+        color: rgb(0, 0, 255);
+    }
+    60% {
+        color: rgb(255, 255, 0);
+    }
+    80% {
+        color: rgb(255, 0, 255);
+    }
+    100% {
+        color: rgb(255, 0, 0);
+    }
+}
+
+.main{
+    /* ^ El diaplay flex no consigo imlplementarlo bien con cajas en columna */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.div1{
+    border: solid 2px red;
+    width: 100px;
+    height: 100px;
+
+    margin: 10px 0 10px 0;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    background-image: url("./src/img/ball.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px 50px;
+}
+
+.div2{
+    border: solid 2px limegreen;
+    width: 100px;
+    height: 100px;
+
+    margin: 10px 0 10px 0;
+    
+    /* display: flex;
+    align-items: flex-end;
+    justify-content: flex-start; */
+
+    background-image: url("./src/img/ball.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 50px 50px;
+}
+
+.div3{
+    border: solid 2px blue;
+    width: 100px;
+    height: 100px;
+
+    margin: 10px 0 10px 0;
+
+    background-image: url("./src/img/ball.png");
+    background-repeat: repeat-y;
+    background-position: right;
+    background-size: 50px 50px;
+}
+
+/* img{
+    height: 50px;
+    width: 50px;
+} */
