@@ -12,3 +12,6 @@ v1.0
 v1.1
     - Agregado estilo básico a los botones
     - Agregado una imagen de la maquetación inicial <dev>
+
+v1.1.2
+    - Agregado un cursor-puntero a los botones
