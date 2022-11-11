@@ -1,0 +1,11 @@
+em{
+    color: blue;
+}
+
+em li{
+    font-weight: bold;
+}
+
+em + em{
+    color: red;
+}

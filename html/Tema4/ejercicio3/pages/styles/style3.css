@@ -1,0 +1,11 @@
+font[face]{
+    font-weight: bold;
+}
+
+font[face="Courier"]{
+    font-style: italic;
+}
+
+font[face="serif"]{
+    color: green;
+}

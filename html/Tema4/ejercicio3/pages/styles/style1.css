@@ -1,15 +1,17 @@
 p{
-    color: #000080;
+    color: rgb(0, 0, 128);
     text-align: justify;
+    font-family: sans-serif;
+}
+
+h1, h2{
     font-family: sans-serif;
 }
 
 h1{
     color: #ab2a3e;
-    font-family: sans-serif;
 }
 
 h2{
-    color: #aaa;
-    font-family: sans-serif;
+    color: #777;
 }
