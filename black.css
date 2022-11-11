@@ -1,4 +1,4 @@
-/* ! BB Style 1.6.5 */
+/* ! BB Style 1.6.7 */
 /* ! By: navarro41yt */
 body{
     background-color: #000;
@@ -21,6 +21,10 @@ body::-webkit-scrollbar-thumb {
     background-color: #000;
     border: 2px solid #f00;
     border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #444;
 }
 
 a{
