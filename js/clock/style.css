@@ -18,7 +18,7 @@ body{
     width: 100vw;
     height: 100vh;
     /* Hacemos que el div tenga un cursor */
-    cursor: wait;
+    cursor: none;
 }
 
 .content{

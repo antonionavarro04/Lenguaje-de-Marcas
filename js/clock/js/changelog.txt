@@ -7,3 +7,6 @@ La hora se actualizará cada 5 minutos en la consola.
 
 v1.1.1
 Arreglado Bugs
+
+v1.1.2
+Cursor ocultado (css)
