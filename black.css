@@ -1,8 +1,9 @@
 /* ! BB Style 1.6.5 */
 /* ! By: navarro41yt */
-html{
+body{
     background-color: #000;
     color: #fff;
+    overflow-y: visible;
 }
 
 body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
