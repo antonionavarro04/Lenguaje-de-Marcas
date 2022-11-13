@@ -11,3 +11,8 @@ v1.1.1
 v1.1.2
     - Caracter aumentado de tamaño
     - Versión mostrada por consola
+
+v1.2
+    - Icono agregado
+    - Delay bajado desde 1000ms a 500ms
+    - Variables y codigo reorganizado y mejorado

@@ -1,4 +1,4 @@
-const version = '1.1.2';
+const version = '1.2';
 
 htmlV = document.getElementById("version");
 
