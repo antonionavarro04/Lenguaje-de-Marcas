@@ -16,3 +16,6 @@ v1.2
     - Icono agregado
     - Delay bajado desde 1000ms a 500ms
     - Variables y codigo reorganizado y mejorado
+
+v1.2.1
+    - Pequeño error en la version
