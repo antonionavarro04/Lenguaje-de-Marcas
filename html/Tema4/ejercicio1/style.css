@@ -38,44 +38,42 @@ h4{
     justify-content: space-around;
 }
 
-.div1{
-    background-color: red;
-    width: 400px;
+.div1, .div2, .div3{
+    width: 350px;
     height: 200px;
     border-radius: 25px;
+    padding: 10px;
 }
 
-.sDiv1{
+.div1{
+    background-color: red;
+}
+
+.sDiv1, .sDiv2{
     display: flex;
     justify-content: flex-start;
 }
 
-.aSDiv11{
+.aSDiv11, .aSDiv12, .aSDiv13{
     width: 100px;
     height: 50px;
-    background-color: brown;
     margin-right: 5px;
+}
+
+.aSDiv11{
+    background-color: brown;
 }
 
 .aSDiv12{
-    width: 100px;
-    height: 50px;
     background-color: green;
-    margin-right: 5px;
 }
 
 .aSDiv13{
-    width: 100px;
-    height: 50px;
     background-color: blue;
-    margin-right: 5px;
 }
 
 .div2{
     background-color: black;
-    width: 400px;
-    height: 200px;
-    border-radius: 25px;
 }
 
 .sDiv2{
@@ -83,62 +81,40 @@ h4{
     flex-direction: column;
 }
 
-.aSDiv21{
+.aSDiv21, .aSDiv22, .aSDiv23{
     width: 100px;
     height: 50px;
+}
+
+.aSDiv21{
     background-color: red;
 }
 
 .aSDiv22{
-    width: 100px;
-    height: 50px;
     background-color: green;
 }
 
-.aSDiv23{
-    width: 100px;
-    height: 50px;
+.aSDiv23, .div3{
     background-color: blue;
 }
 
-.div3{
-    background-color: blue;
-    width: 400px;
-    height: 200px;
-    border-radius: 25px;
-}
-
-.sDiv2{
-    display: flex;
-    align-items: flex-start;
-}
-
-.aSDiv31{
+.aSDiv31, .aSDiv32, .aSDiv33{
     text-decoration: none;
-    transition: 200ms ;
+    transition: 200ms;
 }
 
-.aSDiv32{
-    text-decoration: none;
-    transition: 200ms ;
-}
-
-.aSDiv33{
-    text-decoration: none;
-    transition: 200ms ;
+.aSDiv31:hover, .aSDiv32:hover, .aSDiv33:hover{
+    transition: 500ms;
 }
 
 .aSDiv31:hover{
-    color: limegreen;
-    transition: 500ms;
+    color: lime;
 }
 
 .aSDiv32:hover{
-    color: rgb(255, 130, 234);
-    transition: 500ms;
+    color: rgb(212, 100, 138);
 }
 
 .aSDiv33:hover{
-    color: black;
-    transition: 500ms;
+    color: rgb(255, 255, 0);
 }
