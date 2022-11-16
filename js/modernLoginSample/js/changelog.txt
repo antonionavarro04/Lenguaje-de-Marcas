@@ -1,0 +1,3 @@
+pre-alpha v1.0
+    - Estructura pricipal
+    - Campo de Username Styless
