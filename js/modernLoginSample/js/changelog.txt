@@ -1,3 +1,16 @@
 pre-alpha v1.0
     - Estructura pricipal
     - Campo de Username Styless
+
+alpha v1.0
+    - Campo de Password Styless
+    - Botón de Login Styless
+    - Remind Me Styless
+    - Forgot w/ Style
+    - Iconos para Username y Password
+    - Estructura HTML acabada
+    - 404 para enlaces no funcionales
+    
+    -- CSS
+    - Formulario alineado al centro horizontalmente y verticalmente
+    - Enlace Forgot Password? con estilo

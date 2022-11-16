@@ -37,12 +37,69 @@
     text-transform: uppercase;
     font-family: "comic-style";
     font-size: 30px;
-}
+} .name:hover{cursor: default;}
 
 .form{
-    height: 380px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .otherMethods{
+    height: 80px;
+}
+
+.register{
     height: 50px;
+}
+
+.username, .password{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.username .icon{
+    width: 40px;
+    height: 40px;
+    background: url("src/img/icons/userIcon.svg") no-repeat center;
+    background-size: 25px;
+}
+
+.password .icon{
+    width: 40px;
+    height: 40px;
+    background: url("src/img/icons/passIcon.svg") no-repeat center;
+    background-size: 25px;
+}
+
+.forgotten a{
+    font-family: comic-style;
+    font-size: 9px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1877f2;
+    transition: 100ms;
+}
+
+.forgotten a:hover{
+    cursor: pointer;
+    color: #0062e2;
+    transition: 300ms;
+}
+
+.remind{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.remind label{
+    font-family: comic-style;
+    text-transform: uppercase;
+    font-size: 8px;
+    color: #000;
 }
