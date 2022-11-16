@@ -1,0 +1,52 @@
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 25px;
+}
+
+.header{
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    text-transform: uppercase;
+    font-family: "comic-style";
+    font-size: 30px;
+} .name:hover{cursor: default;}
+
+.form{
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.otherMethods{
+    height: 80px;
+}
+
+.register{
+    height: 50px;
+}

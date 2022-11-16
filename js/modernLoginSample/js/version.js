@@ -1,4 +1,4 @@
-const version = "v1.0"
+const version = "v1.1"
 const state = "alpha"
 
 console.info("Version: " + version)

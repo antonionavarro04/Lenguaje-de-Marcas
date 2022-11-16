@@ -14,3 +14,6 @@ alpha v1.0
     -- CSS
     - Formulario alineado al centro horizontalmente y verticalmente
     - Enlace Forgot Password? con estilo
+
+alpha v1.1
+    - Estilos divididos en varios archivos
