@@ -9,12 +9,12 @@ a{
     color: rgb(0, 200, 255);
     text-decoration: none;
 
-    transition: 500ms;
+    transition: 100ms;
 }
 
 a:hover{
     color: rgb(0, 150, 255);
     text-decoration: underline;
 
-    transition: 500ms;
+    transition: 300ms;
 }
