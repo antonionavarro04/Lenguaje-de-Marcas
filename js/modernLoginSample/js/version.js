@@ -1,4 +1,4 @@
-const version = "v1.3";
+const version = "v1.4";
 const state = "alpha";
 
 console.info("Version: " + version);
@@ -8,7 +8,7 @@ var htmlV = document.getElementById("version");
 var htmlS = document.getElementById("state");
 
 // ? Solo lo imprimiremos si el estado es diferente a la release
-if (state != "stable" || state != "Stable") {
+if (state != "stable" && state != "Stable") {
     console.info("State: " + state);
 
     // ! Imprimimos en HTML
@@ -29,7 +29,8 @@ if (state != "stable" || state != "Stable") {
             htmlS.style.color = "green";
             break;
         default:
-            htmlS.style.color = "black";
+            htmlS.style.color = "orange";
+            htmlS.innerHTML = state + "?";
             break;
     }
 

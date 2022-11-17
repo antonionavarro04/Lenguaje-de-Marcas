@@ -2,3 +2,13 @@
     font-family: "comic-style";
     src: url("../src/font/DeepShadow.ttf");
 }
+
+@font-face{
+    font-family: "comic-style-over";
+    src: url("../src/font/DeepShadowOver.ttf");
+}
+
+@font-face{
+    font-family: "comic-style-under";
+    src: url("../src/font/DeepShadowUnder.ttf");
+}

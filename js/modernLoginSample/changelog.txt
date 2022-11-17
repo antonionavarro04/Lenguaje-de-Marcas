@@ -33,3 +33,15 @@ alpha v1.3
         - Mayoria de cosas alineadas al centro x e y
         - Complicaciones para dar estilo a un elemento de Input
     }
+
+alpha v1.4
+    GENERAL{
+        - Changelog movido a la carpeta raíz.
+    }
+    JS{
+        - Script del estado arreglado
+    }
+    HTML/CSS{
+        - Resto de fuentes importadas
+        - Titulo cambiado a Comic Store
+    }
