@@ -1,0 +1,20 @@
+body{
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin-top: 50px;
+}
+
+a{
+    color: rgb(0, 200, 255);
+    text-decoration: none;
+
+    transition: 100ms;
+}
+
+a:hover{
+    color: rgb(0, 150, 255);
+    text-decoration: underline;
+
+    transition: 300ms;
+}
