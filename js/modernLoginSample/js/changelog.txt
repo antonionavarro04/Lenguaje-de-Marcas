@@ -17,3 +17,7 @@ alpha v1.0
 
 alpha v1.1
     - Estilos divididos en varios archivos
+
+alpha v1.2
+    - Rutas de imagenes arregladas
+    - Nombre no seleccionable

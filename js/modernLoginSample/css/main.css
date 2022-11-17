@@ -32,6 +32,7 @@
     text-transform: uppercase;
     font-family: "comic-style";
     font-size: 30px;
+    user-select: none;
 } .name:hover{cursor: default;}
 
 .form{
