@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/form.css">
         <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/vars.css">
         <link rel="icon" href="./src/icon/icon.png">
         <script defer src="js/version.js"></script>
     </head>
@@ -17,14 +18,16 @@
                     <div class="name">c madness</div>
                 </div>
                 <div class="form">
-                    <div class="username">
-                        <div class="icon"></div>
-                        <input class="usernameField" type="text" placeholder="Username">
-                    </div>
-                    <div class="password">
-                        <div class="icon"></div>
-                        <input class="passwordField" type="password" placeholder="Password">
-                    </div>
+                    <form action="POST">
+                        <div class="username">
+                            <div class="icon"></div>
+                            <input class="usernameField" type="text" placeholder="Username">
+                        </div>
+                        <div class="password">
+                            <div class="icon"></div>
+                            <input class="passwordField" type="password" placeholder="Password">
+                        </div>
+                    </form>
                     <div class="forgotten">
                         <a href="./src/404/">Forgot Password?</a>
                     </div>
@@ -36,9 +39,14 @@
                         <button class="login">Login</button>
                     </div>
                 </div>
+                <div class="text">Other Methods</div>
                 <div class="otherMethods">
-                    <a href="https://www.google.com">Google</a>
-                    <a href="https://www.facebook.com">Facebook</a>
+                    <a class="google" href="https://www.google.com">
+                        <div class="icon"></div>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com">
+                        <div class="icon"></div>
+                    </a>
                 </div>
                 <div class="register">
                     <label for="register">Don't have an Account?</label>
@@ -46,5 +54,7 @@
                 </div>
             </div>
         </div>
+        <div id="version"></div>
+        <div id="state"></div>
     </body>
 </html>

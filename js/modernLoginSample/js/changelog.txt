@@ -21,3 +21,15 @@ alpha v1.1
 alpha v1.2
     - Rutas de imagenes arregladas
     - Nombre no seleccionable
+
+alpha v1.3
+    JS{
+        - ";" en js arreglado
+        - Version y State agregados en el documento
+        - Color de State controlado desde JavaScript
+    }
+    HTML/CSS{
+        - Iconos para Google Facebook, así como otherMethods acabado
+        - Mayoria de cosas alineadas al centro x e y
+        - Complicaciones para dar estilo a un elemento de Input
+    }
