@@ -45,3 +45,10 @@ alpha v1.4
         - Resto de fuentes importadas
         - Titulo cambiado a Comic Store
     }
+
+alpha v1.4.1
+    JS{
+        - Ahora se imprime mas información sobre el estado
+        - Si el estado es "stable" se eliminara el elemento de HTML
+        - Información extra sobre el autor agregada en la consola
+    }

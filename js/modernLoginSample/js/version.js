@@ -1,4 +1,4 @@
-const version = "v1.4";
+const version = "v1.4.1";
 const state = "alpha";
 
 console.info("Version: " + version);
@@ -18,19 +18,27 @@ if (state != "stable" && state != "Stable") {
     switch (state) {
         case "pre-alpha":
             htmlS.style.color = "#990000";
+            console.error("This version is a pre-alpha, it may contain errors, missing content and is not recommended to use it.");
             break;
         case "alpha":
             htmlS.style.color = "red";
+            console.warn("This phase is not stable yet, it may have errors.");
             break;
         case "beta":
             htmlS.style.color = "blue";
+            console.warn("This phase is not stable yet, it may have errors.");
             break;
         case "release":
             htmlS.style.color = "green";
+            console.warn("This phase is nearly stable but it may have some errors.");
+            break;
+        case "stable":
+            htmlS.remove();
             break;
         default:
             htmlS.style.color = "orange";
             htmlS.innerHTML = state + "?";
+            console.error("Esta versión no tiene un estado establecido.");
             break;
     }
 
@@ -38,3 +46,9 @@ if (state != "stable" && state != "Stable") {
     // ! Imprimimos en HTML
     htmlV.innerHTML = version;
 }
+
+console.log("");
+
+console.info("Autor: Antonio Navarro");
+console.info("Github: https://github.com/antonionavarro04");
+console.info("Youtube: https://www.youtube.com/c/navarro41yt");
