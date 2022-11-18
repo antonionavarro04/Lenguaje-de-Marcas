@@ -49,24 +49,15 @@ h1{
 .div1{
     border: solid 2px red;
     margin: 10px 0 10px 0;
-    background-image: url("./src/img/ball.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50px 50px;
+    background: url(./src/img/ball.png) no-repeat center/50px 50px;
 }
 
 .div2{
     border: solid 2px limegreen;
-    background-image: url("./src/img/ball.png");
-    background-repeat: repeat-x;
-    background-position: bottom;
-    background-size: 50px 50px;
+    background: url(./src/img/ball.png) repeat-x bottom/50px 50px;
 }
 
 .div3{
     border: solid 2px blue;
-    background-image: url("./src/img/ball.png");
-    background-repeat: repeat-y;
-    background-position: right;
-    background-size: 50px 50px;
+    background: url(./src/img/ball.png) repeat-y right/50px 50px;
 }
