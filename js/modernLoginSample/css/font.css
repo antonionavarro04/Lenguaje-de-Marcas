@@ -12,3 +12,23 @@
     font-family: "comic-style-under";
     src: url("../src/font/DeepShadowUnder.ttf");
 }
+
+@font-face{
+    font-family: "roboto-thin";
+    src: url("../src/font/RobotoThin.ttf");
+}
+
+@font-face{
+    font-family: "roboto-regular";
+    src: url("../src/font/RobotoRegular.ttf");
+}
+
+@font-face{
+    font-family: "roboto-medium";
+    src: url("../src/font/RobotoMedium.ttf");
+}
+
+@font-face{
+    font-family: "roboto-bold";
+    src: url("../src/font/RobotoBold.ttf");
+}

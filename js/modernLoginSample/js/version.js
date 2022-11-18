@@ -1,5 +1,5 @@
-const version = "v1.4.1";
-const state = "alpha";
+const version = "v1.0";
+const state = "beta";
 
 console.info("Version: " + version);
 

@@ -1,3 +1,7 @@
+:root{
+    --iconDiv: 50px;
+}
+
 .username, .password{
     display: flex;
     justify-content: flex-start;
@@ -5,32 +9,49 @@
 }
 
 .username .icon{
-    width: 40px;
-    height: 40px;
+    width: var(--iconDiv);
+    height: var(--iconDiv);
     background: url("../src/img/icons/userIcon.svg") no-repeat center;
-    background-size: 25px;
+    background-size: 35px;
 }
 
 .password .icon{
-    width: 40px;
-    height: 40px;
+    width: var(--iconDiv);
+    height: var(--iconDiv);
     background: url("../src/img/icons/passIcon.svg") no-repeat center;
-    background-size: 25px;
+    background-size: 35px;
 }
 
-.forgotten a{
+.usernameField, .passwordField{
+    height: 30px;
+    width: 200px;
+    border: 1px solid #a0a0a0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-family: roboto-bold;
+    font-size: 14px;
+    transition: 500ms;
+}
+
+.usernameField:focus, .passwordField:focus{
+    background-color: #eee;
+    text-transform: none;
+    font-family: roboto-regular;
+    font-size: 14px;
+    transition: 500ms;
+}
+
+.usernameField:hover, .passwordField:hover{
+    background-color: #eee;
+    transition: 500ms;
+}
+
+.usernameField::placeholder, .passwordField::placeholder{
+    text-transform: uppercase;
+    text-align: center;
     font-family: comic-style;
     font-size: 9px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #1877f2;
-    transition: 100ms;
-}
-
-.forgotten a:hover{
-    cursor: pointer;
-    color: #0062e2;
-    transition: 300ms;
+    transition: 500ms;
 }
 
 .remind{
@@ -49,4 +70,25 @@
 .checkbox{
     height: 14px;
     width: 14px;
+}
+
+.log button{
+    height: 30px;
+    width: 100px;
+    border: 1px solid #a0a0a0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 500ms;
+}
+
+.log button:hover{
+    cursor: crosshair;
+    border: 1px solid #888;
+    background-color: #eee;
+    transition: 500ms;
+}
+
+.log button:active{
+    background-color: #ccc;
+    transition: 500ms;
 }

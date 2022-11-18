@@ -52,3 +52,18 @@ alpha v1.4.1
         - Si el estado es "stable" se eliminara el elemento de HTML
         - Información extra sobre el autor agregada en la consola
     }
+
+beta v1.0
+    GENERAL{
+        - Fuentes de Roboto Importadas
+    }
+    HTML/CSS{
+        - Estilo general para los enlaces
+        - Register puesto en columna
+        - Versión y Estado no seleccionables
+        - Campos de Texto con estilo
+        - Botón de Login con estilo
+    }
+    JS{
+        - Cambiamos a la BETA!!!
+    }
