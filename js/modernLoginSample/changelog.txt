@@ -67,3 +67,24 @@ beta v1.0
     JS{
         - Cambiamos a la BETA!!!
     }
+
+beta v1.1
+    GENERAL{
+        - Fuentes movidas a cada carpeta correspondiente
+    }
+    JS{
+        - Reorganización masiva del Script
+        - Autor agregado en el Codigo fuente
+    }
+    HTML/CSS{
+        Variables css movidas al archivo vars.css
+        Padding a los campos de Registro
+        Iconos eliminados temporalmente
+        Estilo al boton de Login cambiado
+        Alturas de la pagina reajustadas
+    }
+
+    para beta v1.2{
+        ---MAIN---
+        Botones de OtherMethods modo barra larga redondeada gorda
+    }

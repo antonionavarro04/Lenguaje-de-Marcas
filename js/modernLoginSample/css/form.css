@@ -1,7 +1,3 @@
-:root{
-    --iconDiv: 50px;
-}
-
 .username, .password{
     display: flex;
     justify-content: flex-start;
@@ -24,13 +20,15 @@
 
 .usernameField, .passwordField{
     height: 30px;
-    width: 200px;
-    border: 1px solid #a0a0a0;
+    width: 180px;
+    padding: 0 10px 0 10px;
+    border: 2px solid #a0a0a0;
     border-radius: 10px;
     background-color: #ffffff;
     font-family: roboto-bold;
     font-size: 14px;
     transition: 500ms;
+    margin-bottom: 10px;
 }
 
 .usernameField:focus, .passwordField:focus{
@@ -58,6 +56,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .remind label{
@@ -75,20 +74,24 @@
 .log button{
     height: 30px;
     width: 100px;
-    border: 1px solid #a0a0a0;
+    border: 3px solid #a0a0a0;
     border-radius: 10px;
     background-color: white;
     transition: 500ms;
+    font-family: comic-style;
+    font-size: 10px;
+    text-transform: uppercase;
 }
 
 .log button:hover{
     cursor: crosshair;
-    border: 1px solid #888;
+    border: 3px solid #888;
     background-color: #eee;
     transition: 500ms;
 }
 
 .log button:active{
     background-color: #ccc;
+    border: 3px solid rgb(99, 99, 99);
     transition: 500ms;
 }

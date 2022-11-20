@@ -1,34 +1,34 @@
 @font-face{
     font-family: "comic-style";
-    src: url("../src/font/DeepShadow.ttf");
+    src: url("../src/font/comic/DeepShadow.ttf");
 }
 
 @font-face{
     font-family: "comic-style-over";
-    src: url("../src/font/DeepShadowOver.ttf");
+    src: url("../src/font/comic/DeepShadowOver.ttf");
 }
 
 @font-face{
     font-family: "comic-style-under";
-    src: url("../src/font/DeepShadowUnder.ttf");
+    src: url("../src/font/comic/DeepShadowUnder.ttf");
 }
 
 @font-face{
     font-family: "roboto-thin";
-    src: url("../src/font/RobotoThin.ttf");
+    src: url("../src/font/roboto/RobotoThin.ttf");
 }
 
 @font-face{
     font-family: "roboto-regular";
-    src: url("../src/font/RobotoRegular.ttf");
+    src: url("../src/font/roboto/RobotoRegular.ttf");
 }
 
 @font-face{
     font-family: "roboto-medium";
-    src: url("../src/font/RobotoMedium.ttf");
+    src: url("../src/font/roboto/RobotoMedium.ttf");
 }
 
 @font-face{
     font-family: "roboto-bold";
-    src: url("../src/font/RobotoBold.ttf");
+    src: url("../src/font/roboto/RobotoBold.ttf");
 }

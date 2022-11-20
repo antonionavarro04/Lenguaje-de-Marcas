@@ -1,3 +1,7 @@
+:root{
+    --iconDiv: 50px;
+}
+
 #version, #state{
     position: absolute;
     top: 0;
