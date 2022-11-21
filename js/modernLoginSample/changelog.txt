@@ -88,3 +88,8 @@ beta v1.1
         ---MAIN---
         Botones de OtherMethods modo barra larga redondeada gorda
     }
+
+beta v1.1.1
+    HTML/CSS{
+        Inplementación temprana de Botones
+    }

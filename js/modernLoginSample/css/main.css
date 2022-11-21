@@ -68,23 +68,40 @@ a:hover{
 }
 
 .otherMethods{
-    height: 45px;
+    height: 60px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+.google{
+    padding: 2px;
+    height: 30px;
+    width: 120px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: roboto-regular;
+}
+
 .otherMethods .google .icon{
-    width: 45px;
-    height: 45px;
-    background: url(../src/img/icons/google.svg) no-repeat center/45px;
+    width: var(--iconDiv);
+    height: var(--iconDiv);
+    padding-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../src/img/icons/google.svg) no-repeat center/var(--iconDiv);
 }
 
 .otherMethods .facebook .icon{
-    width: 45px;
-    height: 45px;
-    background: url(../src/img/icons/facebook.svg) no-repeat center/45px;
+    width: var(--iconDiv);
+    height: var(--iconDiv);
+    background: url(../src/img/icons/facebook.svg) no-repeat center/var(--iconDiv);
 }
 
 .register{

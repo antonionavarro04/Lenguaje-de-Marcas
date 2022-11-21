@@ -4,7 +4,7 @@
 */
 
 // ^ Definimos variables
-const version = "v1.1";
+const version = "v1.1.1";
 const state = "Beta";
 
 // ^ Importaciones de Variables de HTML
