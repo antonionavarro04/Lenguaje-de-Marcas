@@ -1,5 +1,5 @@
-a{
-    font-family: comic-style;
+.link{
+    font-family: "comic-style";
     font-size: 9px;
     text-decoration: none;
     text-transform: uppercase;
@@ -7,7 +7,7 @@ a{
     transition: 100ms;
 }
 
-a:hover{
+.link:hover{
     cursor: pointer;
     color: #0062e2;
     text-decoration: underline;
@@ -30,8 +30,8 @@ a:hover{
     width: 400px;
     height: 500px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px #ccc;
+    border: 2px solid #aaa;
+    box-shadow: 0 0 100px #ccc;
     border-radius: 25px;
 }
 
@@ -62,7 +62,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     height: 35px;
-    font-family: comic-style;
+    font-family: "comic-style";
     font-size: 10px;
     text-transform: uppercase;
 }
@@ -71,27 +71,41 @@ a:hover{
     height: 60px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.google{
+.noText{
+    color: black;
+    font-size: 12px;
+    text-transform: capitalize;
+    user-select: none;
+    text-decoration: none;
+}
+
+.google, .facebook{
     padding: 2px;
     height: 30px;
-    width: 120px;
+    width: 150px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: roboto-regular;
+    font-family: "roboto-regular";
+}
+
+.google:hover, .facebook:hover{
+    cursor: pointer;
+    background-color: #eee;
+    transition: 300ms;
 }
 
 .otherMethods .google .icon{
     width: var(--iconDiv);
     height: var(--iconDiv);
-    padding-right: 2px;
+    padding-right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +115,10 @@ a:hover{
 .otherMethods .facebook .icon{
     width: var(--iconDiv);
     height: var(--iconDiv);
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url(../src/img/icons/facebook.svg) no-repeat center/var(--iconDiv);
 }
 
@@ -110,7 +128,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     height: 50px;
-    font-family: comic-style;
+    font-family: "comic-style";
     font-size: 9px;
     text-transform: uppercase;
 }

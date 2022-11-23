@@ -77,19 +77,29 @@ beta v1.1
         - Autor agregado en el Codigo fuente
     }
     HTML/CSS{
-        Variables css movidas al archivo vars.css
-        Padding a los campos de Registro
-        Iconos eliminados temporalmente
-        Estilo al boton de Login cambiado
-        Alturas de la pagina reajustadas
+        - Variables css movidas al archivo vars.css
+        - Padding a los campos de Registro
+        - Iconos eliminados temporalmente
+        - Estilo al boton de Login cambiado
+        - Alturas de la pagina reajustadas
     }
 
     para beta v1.2{
         ---MAIN---
-        Botones de OtherMethods modo barra larga redondeada gorda
+        - Botones de OtherMethods modo barra larga redondeada gorda
     }
 
 beta v1.1.1
     HTML/CSS{
-        Inplementación temprana de Botones
+        - Inplementación temprana de Botones
+    }
+
+release v1.0
+    HTML/CSS{
+        - Enlaces de Forgot Password? y Register se ha cambiado su estilo global de enlace por una clase
+        - Botones Horizontales-Alargados terminados
+        - Caja principal cambiada su borde y sombra
+        - '"' en los nombres de las fuentes agregados
+    } JS{
+        - Cambiamos a la RELEASE!!!
     }

@@ -4,8 +4,8 @@
 */
 
 // ^ Definimos variables
-const version = "v1.1.1";
-const state = "Beta";
+const version = "v1.2";
+const state = "Release";
 
 // ^ Importaciones de Variables de HTML
 var htmlV = document.getElementById("version");

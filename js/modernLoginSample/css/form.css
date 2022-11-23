@@ -25,7 +25,7 @@
     border: 2px solid #a0a0a0;
     border-radius: 10px;
     background-color: #ffffff;
-    font-family: roboto-bold;
+    font-family: "roboto-bold";
     font-size: 14px;
     transition: 500ms;
     margin-bottom: 10px;
@@ -34,7 +34,7 @@
 .usernameField:focus, .passwordField:focus{
     background-color: #eee;
     text-transform: none;
-    font-family: roboto-regular;
+    font-family: "roboto-regular";
     font-size: 14px;
     transition: 500ms;
 }
@@ -47,7 +47,7 @@
 .usernameField::placeholder, .passwordField::placeholder{
     text-transform: uppercase;
     text-align: center;
-    font-family: comic-style;
+    font-family: "comic-style";
     font-size: 9px;
     transition: 500ms;
 }
@@ -60,7 +60,7 @@
 }
 
 .remind label{
-    font-family: comic-style;
+    font-family: "comic-style";
     text-transform: uppercase;
     font-size: 8px;
     color: #000;
@@ -78,7 +78,7 @@
     border-radius: 10px;
     background-color: white;
     transition: 500ms;
-    font-family: comic-style;
+    font-family: "comic-style";
     font-size: 10px;
     text-transform: uppercase;
 }
