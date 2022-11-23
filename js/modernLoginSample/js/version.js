@@ -4,7 +4,7 @@
 */
 
 // ^ Definimos variables
-const version = "v1.2";
+const version = "v1.0.1";
 const state = "Release";
 
 // ^ Importaciones de Variables de HTML
@@ -37,8 +37,8 @@ switch (state) {
         console.warn("This phase isn't stable yet, it may have some errors.");
         break;
     case "Release":
-        htmlS.style.color = "green";
-        htmlV.style.color = "green";
+        htmlS.style.color = "#00BB00";
+        htmlV.style.color = "#00BB00";
         console.warn("This phase is nearly stable but it may have small errors.");
         break;
     case "Stable":

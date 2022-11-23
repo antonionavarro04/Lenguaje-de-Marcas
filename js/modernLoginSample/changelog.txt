@@ -103,3 +103,9 @@ release v1.0
     } JS{
         - Cambiamos a la RELEASE!!!
     }
+
+release v1.0.1
+    JS{
+        - Cambiados el color de la release a un verde mas claro
+        - Versión cambiada a 1.0.1 ya que no se cambio en el paso de la beta a la release.
+    }
