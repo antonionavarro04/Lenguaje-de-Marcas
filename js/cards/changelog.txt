@@ -1,0 +1,2 @@
+pre-alpha v1.0
+    - Base del Proyecto establecida

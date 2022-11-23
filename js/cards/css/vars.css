@@ -1,0 +1,22 @@
+:root{
+    --iconDiv: 20px;
+}
+
+#version, #state{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "roboto-bold";
+    user-select: none;
+}
+
+#state{
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    margin-left: 10px;
+}
