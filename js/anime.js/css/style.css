@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#battery{
+    color: lime;
+    font-size: 90px;
+}
