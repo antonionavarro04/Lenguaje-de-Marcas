@@ -5,3 +5,6 @@ alpha v1.0
     - Tarjetas base terminadas
     - Script de funcionalidad implementandose
     - Z-Index de las tarjetas ajustado
+
+alpha v1.1
+    - Variable icon-div eliminada de vars.css
