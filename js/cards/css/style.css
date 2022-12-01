@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow: hidden;
 }
 
 .bg{
@@ -11,17 +12,99 @@ body{
     align-items: center;
 }
 
-.card1{
+#action{
+    z-index: 1000;
+    width: 410px;
+    height: 460px;
+}
+
+#action:hover{
+    animation: moving 1s normal;
+}
+
+@keyframes moving{
+    0%{
+        transform: translate(0px, 0px);
+    }
+    50%{
+        transform: translate(0px, 10px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+.card1, .card2, .card3{
     width: 300px;
     height: 400px;
     border-radius: 50px;
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 
-.card1 .header{
-    height: 50px;
+.card1{
+    background-color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 1), inset 0 0 10px rgba(255, 0, 0, 1);
+    border: 1px solid red;
+    z-index: 10;
+}
+
+.card2{
+    background-color: rgb(0, 175, 255);
+    box-shadow: 0 0 10px rgba(0, 175, 255, 1), inset 0 0 10px rgba(0, 175, 255, 1);
+    border: 1px solid rgb(0, 175, 255);
+    transform: translate(-20px, 20px);
+    z-index: 9;
+}
+
+.card3{
+    background-color: green;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 1), inset 0 0 10px rgba(0, 128, 0, 1);
+    border: 1px solid green;
+    transform: translate(20px, 20px);
+}
+
+.card1 .img{
+    background-image: url(../src/img/dog.png);
+}
+
+.card2 .img{
+    background-image: url(../src/img/cat.png);
+}
+
+.card3 .img{
+    background-image: url(../src/img/monkey.png);
+}
+
+.header, .footer{
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator{
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: 280px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

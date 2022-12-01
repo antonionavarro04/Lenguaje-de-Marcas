@@ -1,2 +1,7 @@
 pre-alpha v1.0
     - Base del Proyecto establecida
+
+alpha v1.0
+    - Tarjetas base terminadas
+    - Script de funcionalidad implementandose
+    - Z-Index de las tarjetas ajustado

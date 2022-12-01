@@ -1,0 +1,7 @@
+header		25
+separator	25
+img		200
+separator	25
+subHeader	25
+
+TOTAL		300 / 300
