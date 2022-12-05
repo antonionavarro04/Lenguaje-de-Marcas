@@ -1,0 +1,44 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: #ADD8E6;
+    width: 320px;
+    height: 60%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1{
+    color: navy;
+    text-decoration: underline;
+    width: 100%;
+    text-align: start;
+}
+
+img{
+    width: 125px;
+    float: left;
+    margin: 20px;
+    padding-bottom: 10px;
+}
+
+p{
+    text-align: justify;
+    width: 100%;
+}
+
+video{
+    width: 100%;
+}
+
+.link{
+    text-align: center;
+}

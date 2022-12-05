@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <libro año="1961">
+        <titulo>Fundación</titulo>
+        <autor>
+            <nombre>Isaac</nombre>
+            <apellido>Asimov</apellido>
+        </autor>
+        <editorial>Cenit</editorial>
+    </libro>
+    <libro año="1972">
+        <titulo>Los propios Dioses</titulo>
+        <autor>
+            <nombre>Isaac</nombre>
+            <apellido>Asimov</apellido>
+        </autor>
+        <editorial>Doubleday</editorial>
+    </libro>
+    <libro año="1987">
+        <titulo>Fundación y Tierra</titulo>
+        <autor>
+            <nombre>Isaac</nombre>
+            <apellido>Asimov</apellido>
+        </autor>
+        <editorial>Plaza &amp; Janés</editorial>
+    </libro>
+    <libro año="1897">
+        <titulo>Drácula</titulo>
+        <autor>
+            <nombre>Bram</nombre>
+            <apellido>Stoker</apellido>
+        </autor>
+        <editorial>S/D</editorial>
+    </libro>
+</libros>

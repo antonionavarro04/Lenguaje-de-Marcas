@@ -1,0 +1,43 @@
+<html lang="es">
+    <head>
+        <title>Cuestionario de Satisfacción</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="http://lucussolis.000webhostapp.com/exms/encuesta.php" method="post">
+            <h1>Formulario de Satisfacción</h1>
+            <h2>Indique su Edad</h2>
+            <input type="number" name="edad" min="12" max="18">
+            <h2>Indique su Sexo</h2>
+            <input type="radio" name="sexo" value="Hombre">Hombre
+            <input type="radio" name="sexo" value="Mujer">Mujer
+            <h2>Dias que usas el comedor</h2>
+            <select name="dias">
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miercoles">Miercoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+                <option value="FinesDeSemana">Fines De Semana</option>
+            </select>
+            <h2>Calidad (3 es la mayor calificación y 1 la menor)</h2>
+            <label>Rapidez </label>
+            <label>3</label><input type="radio" name="op1">
+            <label>2</label><input type="radio" name="op1">
+            <label>1</label><input type="radio" name="op1">
+            <br>
+            <label>Limpieza </label>
+            <label>3</label><input type="radio" name="op2">
+            <label>2</label><input type="radio" name="op2">
+            <label>1</label><input type="radio" name="op2">
+            <br>
+            <label>Comida </label>
+            <label>3</label><input type="radio" name="op3">
+            <label>2</label><input type="radio" name="op3">
+            <label>1</label><input type="radio" name="op3">
+            <br>
+            <button name="enviar" type="submit">Enviar Opinión</button>
+            <button name="borrar" type="reset">Borrar Formulario</button>
+        </form>
+    </body>
+</html>

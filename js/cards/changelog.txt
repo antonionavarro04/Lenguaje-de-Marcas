@@ -8,3 +8,4 @@ alpha v1.0
 
 alpha v1.1
     - Variable icon-div eliminada de vars.css
+    - Implementacion temprana de Anime.js
