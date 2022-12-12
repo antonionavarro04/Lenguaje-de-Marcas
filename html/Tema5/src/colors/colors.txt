@@ -1,0 +1,12 @@
+HEADER
+#4b4a5b
+
+BODY
+#6087b8
+
+FOOTER
+#76b884
+
+GRISES
+#e9e9ed
+#ffffff
