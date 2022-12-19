@@ -1,0 +1,18 @@
+p {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+img {
+    width: 80%
+}
+
+.enlace {
+    color: rgb(0, 194, 0);
+    transition: 100ms;
+}
+
+.enlace:hover {
+    color: rgb(0, 255, 0);
+    transition: 400ms;
+}

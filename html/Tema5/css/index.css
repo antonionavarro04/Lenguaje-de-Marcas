@@ -1,0 +1,19 @@
+h1{
+    margin-top: 50px;
+}
+
+p{
+    text-align: justify;
+}
+
+p img{
+    width: 95px;
+    float: left;
+    margin-right: 15px;
+}
+
+p .right{
+    width: 95px;
+    float: right;
+    margin-left: 15px;
+}

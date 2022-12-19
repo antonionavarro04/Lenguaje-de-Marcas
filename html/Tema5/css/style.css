@@ -1,5 +1,6 @@
 *{
     font-family: roboto-regular;
+    text-align: justify;
     color: #222;
 }
 
@@ -19,7 +20,7 @@ body{
 .menu .item{
     color: white;
     height: 100%;
-    width: 25%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,26 +48,6 @@ body{
     padding-bottom: 50px;
 }
 
-h1{
-    margin-top: 50px;
-}
-
-p{
-    text-align: justify;
-}
-
-p img{
-    width: 95px;
-    float: left;
-    margin-right: 15px;
-}
-
-p .right{
-    width: 95px;
-    float: right;
-    margin-left: 15px;
-}
-
 .footer{
     width: 100%;
     height: 200px;
@@ -75,6 +56,7 @@ p .right{
     flex-direction: column;
     padding-top: 30px;
     padding-bottom: 30px;
+    user-select: none;
 }
 
 .info, .banner{
