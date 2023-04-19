@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BDlibro SYSTEM "BDlibro.dtd">
+<BDlibro>
+    <libro>
+        <parrafo></parrafo>
+        <titulo></titulo>
+        <autor></autor>
+        <categoria></categoria>
+    </libro>
+</BDlibro>

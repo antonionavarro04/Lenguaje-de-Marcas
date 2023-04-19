@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE soldados SYSTEM "soldados.dtd">
+<soldados>
+    <soldado id="S1" estado="activo" unidad="1" nivel="1">
+        <nombre>John</nombre>
+        <fechaServicio>2010-01-01</fechaServicio>
+        <habilidadesEspeciales>
+            <habilidad nombre="sigilo" profilencia="alta"/>
+        </habilidadesEspeciales>
+        <anotaciones>
+            
+        </anotaciones>
+    </soldado>
+    <soldado id="S303" estado="activo" unidad="4A" nivel="3">
+        <nombre>David</nombre>
+        <fechaServicio></fechaServicio>
+        <habilidadesEspeciales>
+            <habilidad nombre="sigilo" profilencia="alta"/>
+            <habilidad nombre="disparo" profilencia="alta"/>
+        </habilidadesEspeciales>
+        <anotaciones>
+            <anotacion>El soldado David es un excelente tirador</anotacion>
+        </anotaciones>
+    </soldado>
+</soldados>

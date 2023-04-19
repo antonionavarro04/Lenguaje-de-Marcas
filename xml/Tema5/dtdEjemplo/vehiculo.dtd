@@ -1,0 +1,11 @@
+<!ELEMENT vehiculos (vehiculo*)>
+<!ELEMENT vehiculo (fecha, matricula, pago)>
+<!ELEMENT pago (inicioPago, finalPago, sancion?)>
+<!ELEMENT sancion (horaSancion, foto+)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT matricula (#PCDATA)>
+<!ELEMENT inicioPago (#PCDATA)>
+<!ELEMENT finalPago (#PCDATA)>
+<!ELEMENT horaSancion (#PCDATA)>
+<!ELEMENT foto (#PCDATA)>
+<!ATTLIST sancion importe CDATA "35">

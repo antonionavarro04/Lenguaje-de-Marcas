@@ -1,0 +1,12 @@
+<!-- Solución Propuesta -->
+<!ELEMENT naves (nave+)>
+<!ELEMENT nave (nave*, tripulacion?)>
+<!ELEMENT tripulacion (tripulante+)>
+<!ELEMENT tripulante EMPTY>
+<!ATTLIST tripulante nombre CDATA #IMPLIED>
+<!ATTLIST tripulante edad CDATA #IMPLIED>
+<!ATTLIST nave id ID #IMPLIED>
+<!ATTLIST nave combustible CDATA #IMPLIED>
+<!ATTLIST nave lanzamiento CDATA #IMPLIED>
+<!ATTLIST nave distancia CDATA #IMPLIED>
+<!ATTLIST nave idCerca IDREF #IMPLIED>

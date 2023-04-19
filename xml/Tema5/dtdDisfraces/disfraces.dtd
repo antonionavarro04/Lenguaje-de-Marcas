@@ -1,0 +1,14 @@
+<!ELEMENT tienda (disfraces, complementos)>
+<!ELEMENT disfraces (disfraz+)>
+<!ELEMENT disfraz (nombre, partes?, precio)>
+<!ELEMENT partes (parte*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT parte (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT complementos (complemento+)>
+<!ELEMENT complemento (nombre, precio, disfrazesCompatibles)>
+<!ELEMENT disfrazesCompatibles (disfrazCompatible*)>
+<!--El codigo no es requerido-->
+<!ATTLIST disfraz codigo CDATA #IMPLIED>
+<!ELEMENT disfrazCompatible (#PCDATA)>
+<!ATTLIST disfraz sexo (niño|niña|hombre|mujer) #REQUIRED>

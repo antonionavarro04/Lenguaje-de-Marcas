@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nodos SYSTEM "nodo.dtd">
+<nodos>
+    <nodo id="N1">
+        <nodo nodoAdyacente="N2" distancia="7"/>
+        <nodo nodoAdyacente="N4" distancia="2"/>
+    </nodo>
+    <nodo id="N2">
+        <nodo nodoAdyacente="N3" distancia="1"/>
+        <nodo nodoAdyacente="N4" distancia="2"/>
+    </nodo>
+    <nodo id="N3">
+        <nodo nodoAdyacente="N5" distancia="5"/>
+    </nodo>
+    <nodo id="N4">
+        <nodo nodoAdyacente="N5" distancia="5"/>
+        <nodo nodoAdyacente="N2" distancia="3"/>
+        <nodo nodoAdyacente="N3" distancia="8"/>
+    </nodo>
+    <nodo id="N5">
+        <nodo nodoAdyacente="N3" distancia="4"/>
+    </nodo>
+</nodos>

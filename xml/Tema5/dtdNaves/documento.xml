@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- En este documento se quieren recoger diferentes naves espaciales que estan actualmente en órbita, se quieren recojer las naves con: 
+- Un atributo indicando cuanto combustible le queda (L)
+- Un atributo que diga el día, mes y año de lanzamiento
+- Cada nave tiene un identificador único
+- Las naves que esten cercas de otra también se deberán guardar, indicando en estas la distancia relativa a la nave (KM)
+- Cada nave podrá tener o no tripulación
+
+Más abajo se adjunta un ejemplo -->
+<!DOCTYPE naves SYSTEM "naves.dtd">
+<naves>
+    <nave id="A1" combustible="100" lanzamiento="2019-11-28">
+        <nave idCerca="A2" distancia="10"/>
+        <nave idCerca="C1" distancia="20"/>
+        
+        <tripulacion>
+            <tripulante nombre="Juan" edad="25"/>
+            <tripulante nombre="Maria" edad="30"/>
+        </tripulacion>
+    </nave>
+    <nave id="A2" combustible="0" lanzamiento="1999-02-04">
+        <nave idCerca="A1" distancia="10"/>
+        <nave idCerca="C1" distancia="30"/>
+    </nave>
+    <nave id="C1" combustible="800" lanzamiento="2022-01-01">
+        <nave idCerca="A1" distancia="20"/>
+        <nave idCerca="A2" distancia="30"/>
+    </nave>
+    <nave id="B5" combustible="50" lanzamiento="2017-04-11"/>
+</naves>

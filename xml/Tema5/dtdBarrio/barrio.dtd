@@ -1,0 +1,7 @@
+<!ELEMENT barrio (vivienda*)>
+<!ELEMENT vivienda (direccion, numeroDeHabitantes, mascotas)>
+<!ELEMENT direccion (calle, numero)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT numeroDeHabitantes (#PCDATA)>
+<!ELEMENT mascotas ANY>

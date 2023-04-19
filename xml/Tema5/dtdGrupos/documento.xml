@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BDgrupo SYSTEM "BDgrupo.dtd">
+<BDgrupo>
+    <grupo>
+        <fecha></fecha>
+        <nacionalidad></nacionalidad>
+        <numeroDePersonas></numeroDePersonas>
+        <guia></guia>
+    </grupo>
+</BDgrupo>

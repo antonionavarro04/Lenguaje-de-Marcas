@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE ejercicio SYSTEM "ejercicio.dtd">
+<ejercicio>
+    <pregunta>
+        <enunciado>¿Cuál es el resultado de 2+2?</enunciado>
+        <opciones>
+            <opcion>4</opcion>
+            <opcion>5</opcion>
+            <opcion>6</opcion>
+        </opciones>
+        <respuesta>4</respuesta>
+    </pregunta>
+    <pregunta>
+        <enunciado>¿Cuál es el resultado de 5*5?</enunciado>
+        <opciones>
+            <opcion>25</opcion>
+            <opcion>30</opcion>
+            <opcion>35</opcion>
+        </opciones>
+        <respuesta>25</respuesta>
+    </pregunta>
+    <solucion>
+        La solución para la pregunta 1 es 4 y la pregunta 2 es 25.
+    </solucion>
+</ejercicio>

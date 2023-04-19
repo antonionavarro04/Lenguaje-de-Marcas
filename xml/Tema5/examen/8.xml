@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumnos [
+    <!ELEMENT alumnos (pedido+)>
+    <!ELEMENT pedido ((empresa | persona), productosSolicitados, fecha, factura?)>
+    <!ELEMENT empresa (#PCDATA)>
+    <!ELEMENT persona (#PCDATA)>
+    <!ELEMENT productosSolicitados (producto+)>
+    <!ELEMENT producto (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)> <!-- Definido también para factura -->
+    <!ELEMENT factura (emisor, total, fecha)>
+    <!ELEMENT emisor (#PCDATA)>
+    <!ELEMENT total (#PCDATA)>
+    <!ATTLIST empresa cif ID #REQUIRED>
+    <!ATTLIST persona nif ID #REQUIRED>
+    <!ATTLIST factura numfactura ID #REQUIRED>
+    <!ATTLIST factura cliente IDREF #REQUIRED>
+    <!ATTLIST producto codProducto ID #REQUIRED>
+    <!ATTLIST factura producto IDREFS #REQUIRED>
+    <!ATTLIST empresa sector NMTOKEN #REQUIRED>
+    <!ATTLIST empresa actividad NMTOKENS #REQUIRED>
+
+    <!ENTITY MiEmpresa "Mi Empresa">
+]>
+<alumnos>
+    <pedido>
+        <empresa cif="E0000" sector="Turismo" actividad="Informatica Y Telecomunicaciones">Niantic</empresa>
+        <productosSolicitados>
+            <producto codProducto="P0001">Pokeball</producto>
+            <producto codProducto="P0002">Tractor</producto>
+        </productosSolicitados>
+        <fecha>2023-01-01</fecha>
+        <factura numfactura="F0001" cliente="E0000" producto="P0001 P0002">
+            <emisor>
+                &MiEmpresa;
+            </emisor>
+            <total>1000</total>
+            <fecha>2023-01-01</fecha>
+        </factura>
+    </pedido>
+    <pedido>
+        <persona nif="A12345678">Juan</persona>
+        <productosSolicitados>
+            <producto codProducto="P0003">Pala</producto>
+            <producto codProducto="P0004">Pico</producto>
+        </productosSolicitados>
+        <fecha>2021-05-25</fecha>
+    </pedido>
+</alumnos>

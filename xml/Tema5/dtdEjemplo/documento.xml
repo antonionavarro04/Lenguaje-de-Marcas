@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE vehiculos SYSTEM "vehiculo.dtd">
+<vehiculos>
+    <vehiculo>
+        <fecha></fecha>
+        <matricula></matricula>
+        <pago>
+            <inicioPago></inicioPago>
+            <finalPago></finalPago>
+            <sancion importe="5">
+                <horaSancion></horaSancion>
+                <foto></foto>
+            </sancion>
+        </pago>
+    </vehiculo>
+</vehiculos>

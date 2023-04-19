@@ -1,0 +1,5 @@
+function calcularArea() {
+    var lado = parseFloat(document.getElementById("dato").value);
+    var area = lado * lado;
+    document.getElementById("resultado").innerHTML = "El área del cuadrado es " + area;
+}

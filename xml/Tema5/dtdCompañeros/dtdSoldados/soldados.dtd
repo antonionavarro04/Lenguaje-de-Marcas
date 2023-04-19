@@ -1,0 +1,14 @@
+<!ELEMENT soldados (soldado+)>
+<!ELEMENT soldado (nombre, fechaServicio, habilidadesEspeciales?, anotaciones?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechaServicio (#PCDATA)>
+<!ELEMENT habilidadesEspeciales (habilidad*)>
+<!ELEMENT habilidad (#PCDATA)>
+<!ELEMENT anotaciones (anotacion*)>
+<!ELEMENT anotacion (#PCDATA)>
+<!ATTLIST soldado id ID #IMPLIED>
+<!ATTLIST soldado estado CDATA #REQUIRED>
+<!ATTLIST soldado unidad CDATA #REQUIRED>
+<!ATTLIST soldado nivel CDATA #REQUIRED>
+<!ATTLIST habilidad nombre CDATA #REQUIRED>
+<!ATTLIST habilidad profilencia CDATA #REQUIRED>

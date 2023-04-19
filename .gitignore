@@ -1,2 +1,4 @@
 /a
 /box.*
+/outputs/*.csv
+/outputs/*.json

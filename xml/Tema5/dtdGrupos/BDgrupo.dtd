@@ -1,0 +1,6 @@
+<!ELEMENT BDgrupo (grupo*)>
+<!ELEMENT grupo (fecha, nacionalidad, numeroDePersonas, guia)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ELEMENT numeroDePersonas (#PCDATA)>
+<!ELEMENT guia EMPTY>

@@ -1,0 +1,6 @@
+<!ELEMENT BDlibro (libro*)>
+<!ELEMENT libro (parrafo, titulo, autor, categoria)>
+<!ELEMENT parrafo (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>

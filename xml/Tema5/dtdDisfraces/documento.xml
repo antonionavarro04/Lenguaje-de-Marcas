@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "disfraces.dtd">
+<tienda>
+    <disfraces>
+        <disfraz codigo="D1" sexo="hombre">
+            <nombre>Torero</nombre>
+            <partes>
+                <parte>Montera</parte>
+                <parte>Chaqueta</parte>
+                <parte>Pantalón</parte>
+            </partes>
+            <precio>45</precio>
+        </disfraz>
+        <disfraz codigo="D2" sexo="hombre">
+            <nombre>Romano</nombre>
+            <partes>
+                <parte>Pantalon Corto</parte>
+            </partes>
+            <precio>52</precio>
+        </disfraz>
+        <disfraz codigo="D3" sexo="niño">
+            <nombre>Doctor</nombre>
+            <partes>
+                <parte>Bata</parte>
+            </partes>
+            <precio>20</precio>
+        </disfraz>
+        <disfraz codigo="D4" sexo="mujer">
+            <nombre>Doctora</nombre>
+            <partes>
+                <parte>Bata</parte>
+            </partes>
+            <precio>30</precio>
+        </disfraz>
+        <disfraz codigo="D5" sexo="hombre">
+            <nombre>Nudista</nombre>
+            <precio>10</precio>
+        </disfraz>
+    </disfraces>
+    <complementos>
+        <complemento>
+            <nombre>Espada</nombre>
+            <precio>5</precio>
+            <disfrazesCompatibles>
+                <disfrazCompatible>Torero</disfrazCompatible>
+                <disfrazCompatible>Romano</disfrazCompatible>
+            </disfrazesCompatibles>
+        </complemento>
+        <complemento>
+            <nombre>Espada</nombre>
+            <precio>5</precio>
+            <disfrazesCompatibles>
+                <disfrazCompatible>Torero</disfrazCompatible>
+            </disfrazesCompatibles>
+        </complemento>
+    </complementos>
+</tienda>

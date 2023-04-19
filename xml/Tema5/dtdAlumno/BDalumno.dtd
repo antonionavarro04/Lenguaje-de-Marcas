@@ -1,0 +1,7 @@
+<!ELEMENT BDalumno (alumno*)>
+<!ELEMENT alumno (nombre, apellidos, edad, curso, instituto)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+<!ELEMENT instituto (#PCDATA)>

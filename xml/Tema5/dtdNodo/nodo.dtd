@@ -1,0 +1,5 @@
+<!ELEMENT nodos (nodo+)>
+<!ELEMENT nodo (nodo*)>
+<!ATTLIST nodo id ID #IMPLIED>
+<!ATTLIST nodo nodoAdyacente IDREF #IMPLIED>
+<!ATTLIST nodo distancia NMTOKEN #IMPLIED>

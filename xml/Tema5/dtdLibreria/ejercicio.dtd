@@ -1,0 +1,7 @@
+<!ELEMENT ejercicio (pregunta+, solucion)>
+<!ELEMENT pregunta (enunciado, opciones, respuesta)>
+<!ELEMENT enunciado (#PCDATA)>
+<!ELEMENT opciones (opcion+)>
+<!ELEMENT opcion (#PCDATA)>
+<!ELEMENT respuesta (#PCDATA)>
+<!ELEMENT solucion (#PCDATA)>

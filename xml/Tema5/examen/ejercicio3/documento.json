@@ -1,0 +1,13 @@
+{
+    "nombre": "Mateo",
+    "edad": 25,
+    "telefono": {
+        "tipo": "movil",
+        "numero": 658421563
+    },
+    "colores": [
+        "rojo",
+        "azul",
+        "verde"
+    ]
+}
