@@ -11,13 +11,13 @@ title = document.title;
 i.addEventListener("click", () => {
     num++;
     counter.innerHTML = num;
-    document.title = title + " - [ " + num + " ]";
+    document.title = title + " [ " + num + " ]";
 });
 
 d.addEventListener("click", () => {
     num--;
     counter.innerHTML = num;
-    document.title = title + " - [ " + num + " ]";
+    document.title = title + " [ " + num + " ]";
 });
 
 r.addEventListener("click", () => {
