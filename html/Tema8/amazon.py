@@ -7,7 +7,7 @@ import json
 import csv
 
 # Pedimos al usuario lo que quiere mostrar y lo guardamos en la variabe search_query
-search_query = input("¿Qué quieres buscar? ")
+search_query = input("¿Qué quieres buscar?\n>>>")
 
 # Definimos la ruta hacia el ChromeDriver
 chromedriver_path = "C:/Users/antnavarro/Downloads/chromedriver/chromedriver.exe"
@@ -27,7 +27,7 @@ driver.get(url)
 wait = WebDriverWait(driver, 10)
 search_box = wait.until(EC.presence_of_element_located((By.ID, "twotabsearchtextbox")))
 
-# Introducimos la búsqueda y la enviamos
+    # Introducimos la búsqueda y la enviamo
 search_box.send_keys(search_query)
 search_box.submit()
 
@@ -58,7 +58,7 @@ with open("outputs/" + search_query + ".csv", "w", newline="", encoding="utf-8")
     writer = csv.writer(file)
     writer.writerow(["Name", "Price", "Rating", "Link"])
     for laptop in laptops:
-        writer.writerow([laptop["name"], laptop["price"], laptop["rating"], laptop["link"].replace(",", "_")])
+        writer.writerow((laptop["name"], laptop["price"], laptop["rating"], laptop["link"].replace(",", "_")))
 
 # Cerramos la conexión con el driver
 driver.close()
