@@ -8,7 +8,8 @@ Servo wrist_rot;
 Servo wrist_ver;
 Servo gripper;
 
-short turn = 0;
+short unsigned turn = 0;
+short unsigned won = 0;
 
 short previous[9];
 const short numbers[9] = {
@@ -55,6 +56,29 @@ int buttonState3 = LOW;
 bool needsToReset = true;
 bool robot = true;
 
+int generarNumeroAleatorio() {
+  static unsigned int semilla = 0;          // Valor inicial de la semilla
+  semilla = (semilla * 32719 + 3) % 32749;  // Fórmula para generar un número pseudoaleatorio
+  return semilla % 9;                       // Devuelve un número entre 0 y 8 (exclusivo)
+}
+
+bool contains(short a[], short n) {
+  bool state = false;
+  for (short pos = 0; pos < sizeof(a) / sizeof(a[0]); pos++) {
+    if (a[pos] == n) {
+      state = true;
+      break;
+    }
+  }
+  return state;
+}
+
+void fill(short a[], short v) {
+  for (short pos = 0; pos < sizeof(a) / sizeof(a[0]); pos++) {
+    a[pos] = v;
+  }
+}
+
 void reset() {
   Serial.print("RESETING...");
   Serial.println();
@@ -65,24 +89,26 @@ void reset() {
   } else {
     robot = true;
   }
-  
-  for (int i = 1; i <= 30; i++) { // Blinking
+
+  for (int i = 1; i <= 30; i++) {  // Blinking
     digitalWrite(LED, s);
     if (s == HIGH) {
       s = LOW;
     } else {
       s = HIGH;
-    } delay(50);
-  } Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10); // Pos de Espera
+    }
+    delay(50);
+  }
+  Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);  // Pos de Espera
 
-  buttonStateA = LOW; // Reset de Variables
+  buttonStateA = LOW;  // Reset de Variables
   buttonStateB = LOW;
   buttonStateC = LOW;
   buttonState1 = LOW;
   buttonState2 = LOW;
   buttonState3 = LOW;
 
-  digitalWrite(LED, LOW); // Apagamos el LED de Estado
+  digitalWrite(LED, LOW);  // Apagamos el LED de Estado
   needsToReset = false;
 }
 
@@ -202,22 +228,95 @@ short save() {
     n += 10;
   } else if (buttonStateC == HIGH) {
     n += 20;
-  } if (buttonState1 == HIGH) {
+  }
+  if (buttonState1 == HIGH) {
     n++;
   } else if (buttonState2 == HIGH) {
     n += 2;
   } else if (buttonState3 == HIGH) {
     n += 3;
-  } return n;
+  }
+  return n;
+}
+
+short check() {
+  short i = 0;
+
+  bool bit[9];
+
+  short userMoves[5];
+  short robotMoves[4];
+
+  for (short pos = 0; pos < previousLength; pos += 2) {
+    userMoves[i] = previous[pos];
+    robotMoves[i] = previous[pos + 1];
+    i++;
+  } i = 0;
+
+  for (short pos = 0; pos < previousLength; pos++) {
+    bit[pos] = contains(userMoves, numbers[pos]);
+    i++;
+  } i = 0;
+
+  for (int pos = 0; pos < previousLength; pos++) {
+    Serial.print(bit[pos]);
+    Serial.print(", ");
+  }
+
+  // Bloque para comprobar
+  if (bit[0] && bit[1] && bit[2]) {
+    return 1;
+  } else if (bit[0] && bit[3] && bit[6]) {
+    return 1;
+  } else if (bit[2] && bit[5] && bit[8]) {
+    return 1;
+  } else if (bit[8] && bit[7] && bit[6]) {
+    return 1;
+  } else if (bit[5] && bit[4] && bit[3]) {
+    return 1;
+  } else if (bit[0] && bit[4] && bit[8]) {
+    return 1;
+  } else if (bit[1] && bit[4] && bit[7]) {
+    return 1;
+  } else if (bit[2] && bit[4] && bit[6]) {
+    return 1;
+  }
+  // Bloque para comprobar
+
+  for (short pos = 0; pos < previousLength; pos++) {
+    bit[i] = false;
+  }
+
+  for (short pos = 0; pos < previousLength; pos++) {
+    bit[pos] = contains(robotMoves, numbers[pos]);
+  } i = 0;
+
+  if (bit[0] && bit[1] && bit[2]) {
+    return 2;
+  } else if (bit[0] && bit[3] && bit[6]) {
+    return 2;
+  } else if (bit[2] && bit[5] && bit[8]) {
+    return 2;
+  } else if (bit[8] && bit[7] && bit[6]) {
+    return 2;
+  } else if (bit[5] && bit[4] && bit[3]) {
+    return 2;
+  } else if (bit[0] && bit[4] && bit[8]) {
+    return 2;
+  } else if (bit[1] && bit[4] && bit[7]) {
+    return 2;
+  } else if (bit[2] && bit[4] && bit[6]) {
+    return 2;
+  } return 0;
 }
 
 void predictMove() {
-  short n = 0;
+  int n = 0;
   short v = 0;
   bool ended;
-  
+
   do {
-    n = random(0, 9);
+    n = generarNumeroAleatorio();
     v = numbers[n];
     ended = true;
 
@@ -227,6 +326,8 @@ void predictMove() {
         break;
       }
     }
+    Serial.println(n);
+    Serial.println(numbers[n]);
   } while (!ended);
 
   switch (v) {
@@ -269,7 +370,7 @@ void predictMove() {
       buttonStateC = HIGH;
       buttonState2 = HIGH;
       break;
-    
+
     case LR:
       buttonStateC = HIGH;
       buttonState1 = HIGH;
@@ -289,114 +390,128 @@ void setup() {
 }
 
 void loop() {
-  if (needsToReset) {
-    reset();
-  }
+  if (won == 0) {
+    if (needsToReset) {
+      reset();
+    }
 
-  Serial.println("READY");
-  
-  Serial.print("[");
-  for (short pos = 0; pos < previousLength; pos++) {
-    if (previous[pos] != 0) {
-      switch (previous[pos]) {
-        case UL:
-          Serial.print(UL_STR);
-          break;
+    Serial.println("READY");
 
-        case UM:
-          Serial.print(UM_STR);
-          break;
-          
-        case UR:
-          Serial.print(UR_STR);
-          break;
-          
-        case ML:
-          Serial.print(ML_STR);
-          break;
-          
-        case MM:
-          Serial.print(MM_STR);
-          break;
-          
-        case MR:
-          Serial.print(MR_STR);
-          break;
-          
-        case LL:
-          Serial.print(LL_STR);
-          break;
-          
-        case LM:
-          Serial.print(LM_STR);
-          break;
-          
-        case LR:
-          Serial.print(LR_STR);
-          break;
+    Serial.print("[");
+    for (short pos = 0; pos < previousLength; pos++) {
+      if (previous[pos] != 0) {
+        switch (previous[pos]) {
+          case UL:
+            Serial.print(UL_STR);
+            break;
 
-        default:
-          Serial.print("Undefined");
-          break;
-      } if ((turn - 1) != pos) {
-        Serial.print(", ");
+          case UM:
+            Serial.print(UM_STR);
+            break;
+
+          case UR:
+            Serial.print(UR_STR);
+            break;
+
+          case ML:
+            Serial.print(ML_STR);
+            break;
+
+          case MM:
+            Serial.print(MM_STR);
+            break;
+
+          case MR:
+            Serial.print(MR_STR);
+            break;
+
+          case LL:
+            Serial.print(LL_STR);
+            break;
+
+          case LM:
+            Serial.print(LM_STR);
+            break;
+
+          case LR:
+            Serial.print(LR_STR);
+            break;
+
+          default:
+            Serial.print("Undefined");
+            break;
+        }
+        if ((turn - 1) != pos) {
+          Serial.print(", ");
+        }
       }
     }
-  } Serial.println("]");
+    Serial.println("]");
 
-  delay(U_DEL);
-
-  if (robot) {
-    predictMove();
-  }
-
-  // Leemos los Botones
-  if (!robot) {
-    buttonStateA = digitalRead(BUTTON_A);
-    buttonStateB = digitalRead(BUTTON_B);
-    buttonStateC = digitalRead(BUTTON_C);
-  }
-
-  while (buttonStateA == HIGH || buttonStateB == HIGH || buttonStateC == HIGH) {
-    digitalWrite(LED, HIGH); // Encendemos el LED de Estado
     delay(U_DEL);
-    Serial.println("STATE W");
 
-    // Leemos los demás botones
-    if (!robot) {
-      buttonState1 = digitalRead(BUTTON_A);
-      buttonState2 = digitalRead(BUTTON_B);
-      buttonState3 = digitalRead(BUTTON_C);
+    if (robot) {
+      predictMove();
     }
 
-    if (buttonState1 == HIGH || buttonState2 == HIGH || buttonState3 == HIGH) {
-      short val = save();
-      bool repeated = false;
-      for (short pos = 0; pos < previousLength; pos++) {
-        if (val == previous[pos]) {
-          Braccio.ServoMovement(10, 0, 45, 170, 180, 90, 10);
-          Braccio.ServoMovement(10, 0, 45, 90, 90, 90, 73);
-          Braccio.ServoMovement(10, 0, 90, 170, 180, 90, 10);
+    // Leemos los Botones
+    if (!robot) {
+      buttonStateA = digitalRead(BUTTON_A);
+      buttonStateB = digitalRead(BUTTON_B);
+      buttonStateC = digitalRead(BUTTON_C);
+    }
 
-          if (robot == true) {
-            robot = false;
-          } else {
-            robot = true;
+    while (buttonStateA == HIGH || buttonStateB == HIGH || buttonStateC == HIGH) {
+      digitalWrite(LED, HIGH);  // Encendemos el LED de Estado
+      delay(U_DEL);
+      Serial.println("STATE W");
+
+      // Leemos los demás botones
+      if (!robot) {
+        buttonState1 = digitalRead(BUTTON_A);
+        buttonState2 = digitalRead(BUTTON_B);
+        buttonState3 = digitalRead(BUTTON_C);
+      }
+
+      if (buttonState1 == HIGH || buttonState2 == HIGH || buttonState3 == HIGH) {
+        short val = save();
+        bool repeated = false;
+        for (short pos = 0; pos < previousLength; pos++) {
+          if (val == previous[pos]) {
+            Braccio.ServoMovement(10, 0, 45, 170, 180, 90, 10);
+            Braccio.ServoMovement(10, 0, 45, 90, 90, 90, 73);
+            Braccio.ServoMovement(10, 0, 90, 170, 180, 90, 10);
+
+            if (robot == true) {
+              robot = false;
+            } else {
+              robot = true;
+            }
+
+            needsToReset = true;
+            repeated = true;
+            break;
           }
-
-          needsToReset = true;
-          repeated = true;
+        }
+        if (repeated) {
           break;
         }
-      } if (repeated) {
+
+        previous[turn] = save();
+        move();
+        won = check();
+        turn++;
+        needsToReset = true;
+        Serial.print(": ");
+        Serial.println(won);
         break;
       }
-
-      previous[turn] = save();
-      move();
-      turn++;
-      needsToReset = true;
-      break;
     }
+  } else if (won == 1) {
+    Braccio.ServoMovement(10, 50, 50, 50, 50, 50, 50);
+  } else if (won == 2) {
+    Braccio.ServoMovement(10, 50, 50, 50, 50, 50, 10);
+  } else if (turn == 9 && won == 0) {
+    Braccio.ServoMovement(10, 50, 50, 50, 50, 50, 73);
   }
 }
