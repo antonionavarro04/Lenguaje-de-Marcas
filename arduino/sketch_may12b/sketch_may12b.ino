@@ -46,6 +46,12 @@ const int LED = 7;
 const short U_DEL = 500;
 const short M_DEL = 15;
 
+const short ROBOT_POS = 35;
+const short HUMAN_POS = 0;
+
+short humanHeight = 55;
+short robotHeight = 60;
+
 int buttonStateA = LOW;
 int buttonStateB = LOW;
 int buttonStateC = LOW;
@@ -96,10 +102,12 @@ void reset() {
       s = LOW;
     } else {
       s = HIGH;
-    }
-    delay(50);
+    } delay(50);
+  } if (robot) {
+    Braccio.ServoMovement(M_DEL, ROBOT_POS, robotHeight, 170, 180, 90, 10);  // Pos de Espera
+  } else {
+    Braccio.ServoMovement(M_DEL, HUMAN_POS, humanHeight, 170, 180, 90, 10);  // Pos de Espera
   }
-  Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);  // Pos de Espera
 
   buttonStateA = LOW;  // Reset de Variables
   buttonStateB = LOW;
@@ -115,10 +123,8 @@ void reset() {
 void move() {
   if (buttonStateA == HIGH && buttonState1 == HIGH) {
     Serial.println("STATE A1");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 70, 75, 120, 160, 90, 73);
-    Braccio.ServoMovement(M_DEL, 70, 135, 145, 145, 90, 73);
+    Braccio.ServoMovement(M_DEL, 70, 75, 120, 160, 90, 40);
+    Braccio.ServoMovement(M_DEL, 70, 135, 145, 145, 90, 40);
     Braccio.ServoMovement(M_DEL, 70, 135, 145, 145, 90, 10);
     Braccio.ServoMovement(M_DEL, 70, 75, 110, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
@@ -126,34 +132,28 @@ void move() {
 
   if (buttonStateA == HIGH && buttonState2 == HIGH) {
     Serial.println("STATE A2");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 62, 75, 120, 160, 90, 73);
-    Braccio.ServoMovement(M_DEL, 62, 125, 135, 170, 90, 73);
+    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 62, 75, 120, 160, 90, 40);
+    Braccio.ServoMovement(M_DEL, 62, 125, 135, 170, 90, 40);
     Braccio.ServoMovement(M_DEL, 62, 125, 135, 170, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateA == HIGH && buttonState3 == HIGH) {
     Serial.println("STATE A3");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 55, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 55, 90, 170, 160, 90, 73);
+    Braccio.ServoMovement(M_DEL, 55, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 55, 90, 170, 160, 90, 40);
     Braccio.ServoMovement(M_DEL, 55, 90, 170, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateB == HIGH && buttonState1 == HIGH) {
     Serial.println("STATE B1");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 160, 90, 73);
-    Braccio.ServoMovement(M_DEL, 75, 120, 150, 150, 90, 73);
+    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 160, 90, 40);
+    Braccio.ServoMovement(M_DEL, 75, 120, 150, 150, 90, 40);
     Braccio.ServoMovement(M_DEL, 75, 120, 150, 150, 90, 10);
     Braccio.ServoMovement(M_DEL, 75, 75, 150, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
@@ -161,36 +161,30 @@ void move() {
 
   if (buttonStateB == HIGH && buttonState2 == HIGH) {
     Serial.println("STATE B2");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 70, 125, 130, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 70, 125, 130, 180, 90, 40);
     Braccio.ServoMovement(M_DEL, 70, 125, 130, 180, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateB == HIGH && buttonState3 == HIGH) {
     Serial.println("STATE B3");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 67, 105, 155, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 67, 105, 155, 180, 90, 40);
     Braccio.ServoMovement(M_DEL, 67, 105, 155, 180, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateC == HIGH && buttonState1 == HIGH) {
     Serial.println("STATE C1");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 87, 75, 120, 160, 90, 73);
-    Braccio.ServoMovement(M_DEL, 87, 125, 140, 160, 90, 73);
+    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 87, 75, 120, 160, 90, 40);
+    Braccio.ServoMovement(M_DEL, 87, 125, 140, 160, 90, 40);
     Braccio.ServoMovement(M_DEL, 87, 125, 140, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 87, 75, 120, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
@@ -198,24 +192,20 @@ void move() {
 
   if (buttonStateC == HIGH && buttonState2 == HIGH) {
     Serial.println("STATE C2");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 130, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 130, 120, 180, 90, 40);
     Braccio.ServoMovement(M_DEL, 85, 130, 120, 180, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateC == HIGH && buttonState3 == HIGH) {
     Serial.println("STATE C3");
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 10);
-    Braccio.ServoMovement(M_DEL, 0, 90, 170, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
-    Braccio.ServoMovement(M_DEL, 85, 95, 170, 170, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 95, 170, 170, 90, 40);
     Braccio.ServoMovement(M_DEL, 85, 95, 170, 170, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
@@ -492,12 +482,22 @@ void loop() {
             repeated = true;
             break;
           }
-        }
-        if (repeated) {
+        } if (repeated) {
           break;
         }
 
         previous[turn] = save();
+
+        if (robot) {
+          Braccio.ServoMovement(M_DEL, ROBOT_POS, robotHeight, 170, 180, 90, 40);
+          Braccio.ServoMovement(M_DEL, ROBOT_POS, 0, 170, 180, 90, 40);
+          robotHeight += 10;
+        } else {
+          Braccio.ServoMovement(M_DEL, HUMAN_POS, humanHeight, 170, 180, 90, 40);
+          Braccio.ServoMovement(M_DEL, HUMAN_POS, 0, 170, 180, 90, 40);
+          humanHeight += 9;
+        }
+
         move();
         won = check();
         turn++;
