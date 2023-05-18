@@ -43,14 +43,14 @@ const int BUTTON_B = 8;
 const int BUTTON_C = 4;
 const int LED = 7;
 
-const short U_DEL = 500;
+const short U_DEL = 200;
 const short M_DEL = 15;
 
 const short ROBOT_POS = 35;
 const short HUMAN_POS = 0;
 
 short humanHeight = 55;
-short robotHeight = 60;
+short robotHeight = 55;
 
 int buttonStateA = LOW;
 int buttonStateB = LOW;
@@ -61,9 +61,24 @@ int buttonState3 = LOW;
 
 bool needsToReset = true;
 bool robot = true;
+bool alt = true;
 
-int generarNumeroAleatorio() {
-  static unsigned int semilla = 0;          // Valor inicial de la semilla
+void newGame() {
+  robot = true;
+  alt = true;
+  needsToReset = true;
+  humanHeight = 55;
+  robotHeight = 60;
+  turn = 0;
+  won = 0;
+
+  for (short pos = 0; pos < previousLength; pos++) {
+    previous[pos] = 0;
+  } Serial.println("All variables reseted...");
+}
+
+int rng() {
+  static unsigned long semilla = random(random());
   semilla = (semilla * 32719 + 3) % 32749;  // Fórmula para generar un número pseudoaleatorio
   return semilla % 9;                       // Devuelve un número entre 0 y 8 (exclusivo)
 }
@@ -123,8 +138,8 @@ void reset() {
 void move() {
   if (buttonStateA == HIGH && buttonState1 == HIGH) {
     Serial.println("STATE A1");
-    Braccio.ServoMovement(M_DEL, 70, 75, 120, 160, 90, 40);
-    Braccio.ServoMovement(M_DEL, 70, 135, 145, 145, 90, 40);
+    Braccio.ServoMovement(M_DEL, 70, 75, 120, 160, 90, 73);
+    Braccio.ServoMovement(M_DEL, 70, 135, 145, 145, 90, 73);
     Braccio.ServoMovement(M_DEL, 70, 135, 145, 145, 90, 10);
     Braccio.ServoMovement(M_DEL, 70, 75, 110, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
@@ -132,28 +147,28 @@ void move() {
 
   if (buttonStateA == HIGH && buttonState2 == HIGH) {
     Serial.println("STATE A2");
-    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 62, 75, 120, 160, 90, 40);
-    Braccio.ServoMovement(M_DEL, 62, 125, 135, 170, 90, 40);
+    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 62, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 62, 75, 120, 160, 90, 73);
+    Braccio.ServoMovement(M_DEL, 62, 125, 135, 170, 90, 73);
     Braccio.ServoMovement(M_DEL, 62, 125, 135, 170, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateA == HIGH && buttonState3 == HIGH) {
     Serial.println("STATE A3");
-    Braccio.ServoMovement(M_DEL, 55, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 55, 90, 170, 160, 90, 40);
+    Braccio.ServoMovement(M_DEL, 55, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 55, 90, 170, 160, 90, 73);
     Braccio.ServoMovement(M_DEL, 55, 90, 170, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateB == HIGH && buttonState1 == HIGH) {
     Serial.println("STATE B1");
-    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 160, 90, 40);
-    Braccio.ServoMovement(M_DEL, 75, 120, 150, 150, 90, 40);
+    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 60, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 160, 90, 73);
+    Braccio.ServoMovement(M_DEL, 75, 120, 150, 150, 90, 73);
     Braccio.ServoMovement(M_DEL, 75, 120, 150, 150, 90, 10);
     Braccio.ServoMovement(M_DEL, 75, 75, 150, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
@@ -161,30 +176,30 @@ void move() {
 
   if (buttonStateB == HIGH && buttonState2 == HIGH) {
     Serial.println("STATE B2");
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 70, 125, 130, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 75, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 70, 125, 130, 180, 90, 73);
     Braccio.ServoMovement(M_DEL, 70, 125, 130, 180, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateB == HIGH && buttonState3 == HIGH) {
     Serial.println("STATE B3");
-    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 67, 105, 155, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 67, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 67, 105, 155, 180, 90, 73);
     Braccio.ServoMovement(M_DEL, 67, 105, 155, 180, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateC == HIGH && buttonState1 == HIGH) {
     Serial.println("STATE C1");
-    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 87, 75, 120, 160, 90, 40);
-    Braccio.ServoMovement(M_DEL, 87, 125, 140, 160, 90, 40);
+    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 87, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 87, 75, 120, 160, 90, 73);
+    Braccio.ServoMovement(M_DEL, 87, 125, 140, 160, 90, 73);
     Braccio.ServoMovement(M_DEL, 87, 125, 140, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 87, 75, 120, 160, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
@@ -192,20 +207,20 @@ void move() {
 
   if (buttonStateC == HIGH && buttonState2 == HIGH) {
     Serial.println("STATE C2");
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 85, 130, 120, 180, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 130, 120, 180, 90, 73);
     Braccio.ServoMovement(M_DEL, 85, 130, 120, 180, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
 
   if (buttonStateC == HIGH && buttonState3 == HIGH) {
     Serial.println("STATE C3");
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 40);
-    Braccio.ServoMovement(M_DEL, 85, 95, 170, 170, 90, 40);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 75, 120, 180, 90, 73);
+    Braccio.ServoMovement(M_DEL, 85, 95, 170, 170, 90, 73);
     Braccio.ServoMovement(M_DEL, 85, 95, 170, 170, 90, 10);
     Braccio.ServoMovement(M_DEL, 0, 75, 120, 180, 90, 10);
   }
@@ -231,72 +246,65 @@ short save() {
 
 short check() {
   short i = 0;
+  short j = 0;
 
-  bool bit[9];
+  short tablero[9];
+
+  for (short pos = 0; pos < 9; pos++) {
+    tablero[pos] = 0;
+  }
 
   short userMoves[5];
   short robotMoves[4];
 
-  for (short pos = 0; pos < previousLength; pos += 2) {
-    userMoves[i] = previous[pos];
-    robotMoves[i] = previous[pos + 1];
-    i++;
-  } i = 0;
-
   for (short pos = 0; pos < previousLength; pos++) {
-    bit[pos] = contains(userMoves, numbers[pos]);
-    i++;
-  } i = 0;
+    i = 0;
+    j = 0;
+
+    for (short k = 0; k < previousLength; k++) { // Sacamos la posición del numero
+      if (numbers[k] == previous[pos]) {
+        j = k;
+        break;
+      }
+    }
+    
+    if (previous[pos] != 0) { // Si ha tirado
+      if (pos % 2 == 0) {
+        i = 1;
+      } else {
+        i = 2;
+      } tablero[j] = i;
+    }
+  }
 
   for (int pos = 0; pos < previousLength; pos++) {
-    Serial.print(bit[pos]);
+    Serial.print(tablero[pos]);
     Serial.print(", ");
   }
-
-  // Bloque para comprobar
-  if (bit[0] && bit[1] && bit[2]) {
-    return 1;
-  } else if (bit[0] && bit[3] && bit[6]) {
-    return 1;
-  } else if (bit[2] && bit[5] && bit[8]) {
-    return 1;
-  } else if (bit[8] && bit[7] && bit[6]) {
-    return 1;
-  } else if (bit[5] && bit[4] && bit[3]) {
-    return 1;
-  } else if (bit[0] && bit[4] && bit[8]) {
-    return 1;
-  } else if (bit[1] && bit[4] && bit[7]) {
-    return 1;
-  } else if (bit[2] && bit[4] && bit[6]) {
-    return 1;
-  }
-  // Bloque para comprobar
-
-  for (short pos = 0; pos < previousLength; pos++) {
-    bit[i] = false;
+  
+  if (turn % 2 == 0) { // human
+    i = 1;
+  } else { // robot
+    i = 2;
   }
 
-  for (short pos = 0; pos < previousLength; pos++) {
-    bit[pos] = contains(robotMoves, numbers[pos]);
-  } i = 0;
-
-  if (bit[0] && bit[1] && bit[2]) {
-    return 2;
-  } else if (bit[0] && bit[3] && bit[6]) {
-    return 2;
-  } else if (bit[2] && bit[5] && bit[8]) {
-    return 2;
-  } else if (bit[8] && bit[7] && bit[6]) {
-    return 2;
-  } else if (bit[5] && bit[4] && bit[3]) {
-    return 2;
-  } else if (bit[0] && bit[4] && bit[8]) {
-    return 2;
-  } else if (bit[1] && bit[4] && bit[7]) {
-    return 2;
-  } else if (bit[2] && bit[4] && bit[6]) {
-    return 2;
+  // Bloque para comprobar
+  if (tablero[0] == i && tablero[1] == i && tablero[2] == i) {
+    return i;
+  } else if (tablero[0] == i && tablero[3] == i && tablero[6] == i) {
+    return i;
+  } else if (tablero[2] == i && tablero[5] == i && tablero[8] == i) {
+    return i;
+  } else if (tablero[8] == i && tablero[7] == i && tablero[6] == i) {
+    return i;
+  } else if (tablero[5] == i && tablero[4] == i && tablero[3] == i) {
+    return i;
+  } else if (tablero[0] == i && tablero[4] == i && tablero[8] == i) {
+    return i;
+  } else if (tablero[1] == i && tablero[4] == i && tablero[7] == i) {
+    return i;
+  } else if (tablero[2] == i && tablero[4] == i && tablero[6] == i) {
+    return i;
   } return 0;
 }
 
@@ -306,7 +314,7 @@ void predictMove() {
   bool ended;
 
   do {
-    n = generarNumeroAleatorio();
+    n = rng();
     v = numbers[n];
     ended = true;
 
@@ -380,7 +388,9 @@ void setup() {
 }
 
 void loop() {
-  if (won == 0) {
+  if (won == 0 && turn != 9) {
+    rng();
+    
     if (needsToReset) {
       reset();
     }
@@ -449,11 +459,14 @@ void loop() {
       buttonStateA = digitalRead(BUTTON_A);
       buttonStateB = digitalRead(BUTTON_B);
       buttonStateC = digitalRead(BUTTON_C);
-    }
+    } alt = true;
 
     while (buttonStateA == HIGH || buttonStateB == HIGH || buttonStateC == HIGH) {
       digitalWrite(LED, HIGH);  // Encendemos el LED de Estado
-      delay(U_DEL);
+      if (alt && !robot) {
+        delay(500);
+        alt = false;
+      } delay(U_DEL);
       Serial.println("STATE W");
 
       // Leemos los demás botones
@@ -489,12 +502,12 @@ void loop() {
         previous[turn] = save();
 
         if (robot) {
-          Braccio.ServoMovement(M_DEL, ROBOT_POS, robotHeight, 170, 180, 90, 40);
-          Braccio.ServoMovement(M_DEL, ROBOT_POS, 0, 170, 180, 90, 40);
+          Braccio.ServoMovement(M_DEL, ROBOT_POS, robotHeight, 170, 180, 90, 73);
+          Braccio.ServoMovement(M_DEL, ROBOT_POS, 0, 170, 180, 90, 73);
           robotHeight += 10;
         } else {
-          Braccio.ServoMovement(M_DEL, HUMAN_POS, humanHeight, 170, 180, 90, 40);
-          Braccio.ServoMovement(M_DEL, HUMAN_POS, 0, 170, 180, 90, 40);
+          Braccio.ServoMovement(M_DEL, HUMAN_POS, humanHeight, 170, 180, 90, 73);
+          Braccio.ServoMovement(M_DEL, HUMAN_POS, 0, 170, 180, 90, 73);
           humanHeight += 9;
         }
 
@@ -507,11 +520,21 @@ void loop() {
         break;
       }
     }
-  } else if (won == 1) {
-    Braccio.ServoMovement(10, 50, 50, 50, 50, 50, 50);
-  } else if (won == 2) {
-    Braccio.ServoMovement(10, 50, 50, 50, 50, 50, 10);
   } else if (turn == 9 && won == 0) {
     Braccio.ServoMovement(10, 50, 50, 50, 50, 50, 73);
+  } else {
+    if (won == 1) {
+      Braccio.ServoMovement(10, 0, 70, 180, 0, 90, 73); // Choqar
+    } else {
+      Braccio.ServoMovement(10, 0, 60, 180, 90, 180, 73); // Dar la mano
+    } for (int i = 30; i != 0; i--) {
+      Serial.print("Seconds Remaining: "); Serial.print(i); Serial.println();
+      buttonStateA = digitalRead(BUTTON_A);
+      buttonStateA = digitalRead(BUTTON_B);                              
+      buttonStateA = digitalRead(BUTTON_C);
+      if (buttonStateA == HIGH) {
+        break;
+      } delay(1000);
+    } newGame();
   }
 }
