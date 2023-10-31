@@ -1,0 +1,38 @@
+pre-alpha v1.0
+    + Estructura pricipal
+
+pre-alpha v1.1
+    + Funcionalidad básica
+
+alpha v1.0
+    + Color a los simbolos
+
+alpha v1.1
+    - Estado "stable"
+    - Codigo Innecesario
+
+    + Estado "LTS"
+    + Nuevo Icono
+    + Ajustado el tamaño de los botones
+    + Título
+
+alpha v1.1.1
+    - Bug del Icono
+
+alpha v1.1.2
+    - Bug de la Version
+
+alpha v1.2
+    - Bug de los Puntos Negros
+    - Stylesheet innecesaria
+    + Sonido a los Dados y al Tapar
+
+alpha v1.2.1
+    + Versión cambiada
+
+alpha v1.1.2
+    + Cambiado a wav para ver si se arregla el sondio en Github Pages
+    + Agregada la funcion init al final del archivo JS (Temporal)
+
+alpha v1.3
+    + Sonido finalmente arreglado

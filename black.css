@@ -1,4 +1,4 @@
-/* ! BB Style 1.6.8f */
+/* ! BB Style 1.7 */
 /* ! By: navarro41yt */
 body{
     background-color: #000;
@@ -70,6 +70,10 @@ h3{
 
 .atrasA{
     /* ! Mi segunda animación, sale *mejor* */
+    animation: rgb 3s infinite;
+}
+
+.new {
     animation: rgb 3s infinite;
 }
 
